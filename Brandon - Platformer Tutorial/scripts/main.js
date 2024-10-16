@@ -21,5 +21,14 @@ async function OnBeforeProjectStart(runtime)
 
 function Tick(runtime)
 {
-	// Code to run every tick
+	 // Get the instance of PlayerBox
+    const playerBoxInstance = runtime.getInstancesByName("PlayerBox")[0]; // Get the first instance of PlayerBox
+
+    // Get the instance of playerAnim
+    const playerAnimInstance = runtime.getInstancesByName("PlayerAnim")[0]; // Get the first instance of playerAnim
+
+        // Set playerAnim's position to PlayerBox's position
+        playerAnimInstance.x = playerBoxInstance.x; // Set x position
+        playerAnimInstance.y = playerBoxInstance.y; // Set y position
+   
 }
