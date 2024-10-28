@@ -19,13 +19,15 @@
 	},
 	"layouts": {
 		"items": [
-			"Layout 1"
+			"Introduction",
+			"Choice 1"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"Introduction Event Sheet",
+			"Choice 1 Event Sheet"
 		],
 		"subfolders": []
 	},

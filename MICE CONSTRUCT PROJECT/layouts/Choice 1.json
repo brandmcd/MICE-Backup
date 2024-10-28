@@ -1,12 +1,12 @@
 {
-	"name": "Layout 1",
+	"name": "Choice 1",
 	"layers": [
 		{
 			"name": "Layer 0",
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 528424749643498,
+			"sid": 664998093872654,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -40,7 +40,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 876801031096636,
+	"sid": 606451016761307,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 1708,
@@ -49,5 +49,5 @@
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "Event sheet 1"
+	"eventSheet": "Choice 1 Event Sheet"
 }
