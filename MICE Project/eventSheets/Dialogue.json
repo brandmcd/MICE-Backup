@@ -1,0 +1,525 @@
+{
+	"name": "Dialogue",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 865079621238177
+				}
+			],
+			"actions": [
+				{
+					"type": "comment",
+					"text": "On start of layout, we load the content of dialogs.json and parse it in the JSON object.\nWe also set the layer \"dialogue\" that contains our portraits and text objects to be invisible."
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 314618249163977,
+					"parameters": {
+						"layer": "\"Dialogue\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 534195209063267,
+					"parameters": {
+						"tag": "\"dialogues\"",
+						"file": "dialogues.json"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 280988164405250
+				},
+				{
+					"id": "parse",
+					"objectClass": "JSON",
+					"sid": 845969443595174,
+					"parameters": {
+						"data": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 759601742247582
+		},
+		{
+			"eventType": "variable",
+			"name": "curScene",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The number of the current Scene being displayed",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 512665044161397
+		},
+		{
+			"eventType": "variable",
+			"name": "curDialogue",
+			"type": "number",
+			"initialValue": "-1",
+			"comment": "The number of the current Dialogue being displayed",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 667126959058037
+		},
+		{
+			"eventType": "comment",
+			"text": "Controlled using touch input (or mouse clicks)"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 458876823372653
+				}
+			],
+			"actions": [],
+			"sid": 502938124930564,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "If the curDialogue value is less than the number of lines to display in the current dialogue, according to the content of the JSON file, as calculated by the function getNBLines..."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 379788022276627,
+							"parameters": {
+								"variable": "curDialogue",
+								"comparison": 2,
+								"value": "Functions.getNBLines"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "... we add one more to curDialogue, and display this resulting line"
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 713799504884911,
+							"parameters": {
+								"variable": "curDialogue",
+								"value": "1"
+							}
+						},
+						{
+							"callFunction": "dispDialogue",
+							"sid": 740782879575912,
+							"parameters": [
+								"curDialogue"
+							]
+						}
+					],
+					"sid": 420263139471351
+				},
+				{
+					"eventType": "comment",
+					"text": "Otherwise, and if the curScene is less than the numbers of scenes contained in the JSON file..."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 191457476700497
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 542732333198934,
+							"parameters": {
+								"variable": "curScene",
+								"comparison": 2,
+								"value": "Functions.getNBScenes"
+							}
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "... we add to curScene, reset curDialogue to 0 (to display the first dialogue) and display the resulting line"
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 288183068160014,
+							"parameters": {
+								"variable": "curScene",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 664654361971563,
+							"parameters": {
+								"variable": "curDialogue",
+								"value": "0"
+							}
+						},
+						{
+							"callFunction": "dispDialogue",
+							"sid": 249142715977990,
+							"parameters": [
+								"curDialogue"
+							]
+						}
+					],
+					"sid": 422285096065317
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 211373940117421,
+					"parameters": {
+						"variable": "curScene",
+						"comparison": 0,
+						"value": "Functions.getNBScenes"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 679742913639602,
+					"parameters": {
+						"variable": "curDialogue",
+						"comparison": 0,
+						"value": "Functions.getNBLines"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "DemoTxt",
+					"sid": 852183518281363,
+					"parameters": {
+						"text": "\"Press F5 to restart\""
+					}
+				}
+			],
+			"sid": 786516506417816
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Functions",
+			"description": "This group contains all of the functions used in this project",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "This function displays a line from a specific dialogueID - on both occasions this function is called, dialogueID is set to curDialogue"
+				},
+				{
+					"functionName": "dispDialogue",
+					"functionDescription": "",
+					"functionCategory": "dialog",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "dialogueID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 553799494036037
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 507375485922762,
+							"parameters": {
+								"layer": "\"Dialogue\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "JSON.Get(current scene, current dialogue) char for the animation name and name to display in charNameTxt"
+						},
+						{
+							"id": "set-text",
+							"objectClass": "CharNameTxt",
+							"sid": 573614055056010,
+							"parameters": {
+								"text": "JSON.Get(\"scene.\"& curScene & \".dialogues.\" & dialogueID & \".char\")"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Portrait",
+							"sid": 705873096199880,
+							"parameters": {
+								"animation": "JSON.Get(\"scene.\"& curScene &\".dialogues.\"& dialogueID &\".char\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "JSON.Get(current scene, current dialogue) line for the line to display in dialogueTxt - Pass it in the format function that will replace special terms in the line to display some specific format ([b]bold[/b] for example)\n"
+						},
+						{
+							"id": "set-text",
+							"objectClass": "dialogueTxt",
+							"sid": 539557657120969,
+							"parameters": {
+								"text": "Functions.format(JSON.Get(\"scene.\"& curScene & \".dialogues.\" & dialogueID &\".line\"))"
+							}
+						}
+					],
+					"sid": 416212283253225
+				},
+				{
+					"eventType": "comment",
+					"text": "This function returns the number of scenes contained in the current JSON file"
+				},
+				{
+					"functionName": "getNBScenes",
+					"functionDescription": "",
+					"functionCategory": "dialog",
+					"functionReturnType": "number",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 901179815695706,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "Variable1",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 285026419690353
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "JSON",
+									"sid": 407081975144915,
+									"parameters": {
+										"path": "\"scene\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 982491180086444,
+									"parameters": {
+										"variable": "Variable1",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 876652561203598
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 379398110473745,
+									"parameters": {
+										"value": "Variable1-1"
+									}
+								}
+							],
+							"sid": 764841147726297
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "This function returns the number of lines (dialogues) contained in the current scene"
+				},
+				{
+					"functionName": "getNBLines",
+					"functionDescription": "",
+					"functionCategory": "dialog",
+					"functionReturnType": "number",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 450271254380053,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "Variable1",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 486692417131549
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "JSON",
+									"sid": 660201459893792,
+									"parameters": {
+										"path": "\"scene.\" & curScene & \".dialogues\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 418541439624047,
+									"parameters": {
+										"variable": "Variable1",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 270330328182314
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 548689528303377,
+									"parameters": {
+										"value": "Variable1-1"
+									}
+								}
+							],
+							"sid": 227395124733845
+						}
+					]
+				},
+				{
+					"eventType": "comment",
+					"text": "This function allows us to format the text from the JSON file, using replace expressions"
+				},
+				{
+					"functionName": "format",
+					"functionDescription": "",
+					"functionCategory": "dialog",
+					"functionReturnType": "string",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "string",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 811464572926413
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 322173445263966,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "line",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 882585718752255
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "The parameter [b]\"string\"[/b] is passed through a replace() expression that allows us to apply various formatting aspects and by using the local variable [b]line[/b] we can run the text through several of these expressions. \n\nThe expression turns any instances of [b]\"/br\"[/b] into [b]newline[/b] (putting the text onto a new line), any [b]\"(b)\"[/b] into [b]\"[ b]\"[/b] (without the space) and [b]\"(/b)\"[/b] into [b]\"[ /b]\"[/b] (without the space)\n\nWe have to use replace expressions here because tradition BBCode cannot be written into the JSON file "
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 719863400490538,
+									"parameters": {
+										"variable": "line",
+										"value": "replace(string,\"(b)\",\"[b]\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 575556974693746,
+									"parameters": {
+										"variable": "line",
+										"value": "replace(line,\"(/b)\",\"[/b]\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 567095618422341,
+									"parameters": {
+										"variable": "line",
+										"value": "replace(line,\"/br\",newline)"
+									}
+								},
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 600127344873726,
+									"parameters": {
+										"value": "line"
+									}
+								}
+							],
+							"sid": 348066663457391
+						}
+					]
+				}
+			],
+			"sid": 194180727027488
+		}
+	],
+	"sid": 723946656726963
+}

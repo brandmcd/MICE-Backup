@@ -8,6 +8,20 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Json",
+			"name": "JSON",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Keyboard",
 			"name": "Keyboard",
 			"author": "Scirra",
@@ -22,6 +36,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "TiledBg",
 			"name": "Tiled Background",
 			"author": "Scirra",
@@ -31,6 +52,13 @@
 			"type": "plugin",
 			"id": "Tilemap",
 			"name": "Tilemap",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -61,7 +89,8 @@
 		"items": [
 			"Keyboard",
 			"MainPlayer",
-			"PlayerBox"
+			"PlayerBox",
+			"Sprite"
 		],
 		"subfolders": [
 			{
@@ -81,6 +110,34 @@
 				],
 				"subfolders": [],
 				"name": "DO NOT USE"
+			},
+			{
+				"items": [
+					"dialogueTxt",
+					"CharNameTxt",
+					"DemoTxt",
+					"dialogueBox",
+					"DebugTxt"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"AJAX",
+							"JSON",
+							"Touch"
+						],
+						"subfolders": [],
+						"name": "Wacky JSON Shit"
+					},
+					{
+						"items": [
+							"Portrait"
+						],
+						"subfolders": [],
+						"name": "Sprites"
+					}
+				],
+				"name": "Dialogue"
 			}
 		]
 	},
@@ -93,14 +150,16 @@
 	"layouts": {
 		"items": [
 			"DO NOT USE",
-			"Layout 1"
+			"Forest Level",
+			"Choice1"
 		],
 		"subfolders": []
 	},
 	"eventSheets": {
 		"items": [
 			"Event sheet 1",
-			"Platformer"
+			"Platformer",
+			"Dialogue"
 		],
 		"subfolders": []
 	},
@@ -204,7 +263,16 @@
 			"subfolders": []
 		},
 		"general": {
-			"items": [],
+			"items": [
+				{
+					"name": "dialogues.json",
+					"type": "application/json",
+					"sid": 534165691861607,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		}
 	},
@@ -276,7 +344,7 @@
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},
-	"viewportWidth": 854,
-	"viewportHeight": 480,
+	"viewportWidth": 1600,
+	"viewportHeight": 900,
 	"firstLayout": null
 }
