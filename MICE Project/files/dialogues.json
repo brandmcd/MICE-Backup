@@ -1,46 +1,83 @@
 {
 	"scene": [
 		{
-			"dialogues": [
+			"id": 0,
+			"dialogs": [
 				{
 					"char": "Merchant",
-					"line": "Ah, welcome, traveler! You look like you could use some fine armor to protect yourself on these dangerous roads."
+					"type": "line",
+					"line": "This armor is fine-crafted, worthy of any warrior. It will shield you from harm, friend."
 				},
 				{
 					"char": "Knight",
-					"line": "Nonsense! This one looks sturdy enough. You don’t need all that extra weight slowing you down."
+					"type": "line",
+					"line": "Hold on, friend. Is armor truly what you need? Protecting yourself may seem wise, but there’s strength in vulnerability as well."
 				},
 				{
 					"char": "Merchant",
-					"line": "Oh, but that’s where you’re wrong, Sir Knight! This armor here is light as a feather, yet tougher than dragon scales. Perfect for a hero like you, dear customer!"
+					"type": "line",
+					"line": "Strength? Vulnerability leaves you exposed. Armor allows you to face your enemies without fear."
 				},
 				{
 					"char": "Knight",
-					"line": "A true warrior doesn’t hide behind steel, my friend. Let them see the courage on your face, not a metal mask."
+					"type": "line",
+					"line": "Perhaps, but walls keep out more than just harm. When you shield yourself, you distance yourself from those who would support you. To truly thrive, we must let others in."
 				},
 				{
 					"char": "Merchant",
-					"line": "And what good is courage if you’re filled with arrows? With this armor, you’d laugh at the fiercest foes and keep all your limbs intact!"
+					"type": "line",
+					"line": "Yet who would rely on a warrior who falls easily? Protection lets you fight another day, to stand strong beside your allies."
 				},
 				{
 					"char": "Knight",
-					"line": "Bah! Armor like that only serves to lighten your purse, not protect you. A sharp mind and a quick hand will keep you safer than any plated suit."
+					"type": "line",
+					"line": "But if we always hide behind armor, our allies may never know us, never truly understand our struggles. Connection requires openness, not barriers."
 				},
 				{
 					"char": "Merchant",
-					"line": "But what if the enemy is clever, too? Or faster? You’d want every advantage, right? Just imagine—striding into battle, gleaming like a hero from the old tales!"
-				},
-				{
-					"char": "Knight",
-					"line": "Enough! Armor or not, a true fighter needs only their courage and wits. No need to weigh yourself down, traveler."
-				},
+					"type": "question",
+					"question": "So, what will you do? Will you accept the armor for protection or trust in your strength and openness with others?",
+					"nbanswers": 2,
+					"answer0": "I’ll take the armor. Safety is worth it.",
+					"nextscene0": 1,
+					"answer1": "I’ll go without. My strength lies in my trust in others.",
+					"nextscene1": 2
+				}
+			]
+		},
+		{
+			"id": 1,
+			"dialogs": [
 				{
 					"char": "Merchant",
-					"line": "But think of the admiration! The respect! Everyone will see you’re a force to be reckoned with."
+					"type": "line",
+					"line": "A wise choice, friend. May this armor protect you well in the trials to come."
 				},
 				{
 					"char": "Knight",
-					"line": "Or they’ll see someone who paid too much for shiny metal. It’s your choice, traveler."
+					"type": "line",
+					"line": "I only hope that your armor doesn’t keep others at a distance. True strength isn’t always found behind steel."
+				},
+				{
+					"type": "end"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "A bold decision. I hope your allies are as reliable as you believe."
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "Thank you, Merchant. I believe that through trust and connection, I will find the strength to face whatever awaits."
+				},
+				{
+					"type": "end"
 				}
 			]
 		}

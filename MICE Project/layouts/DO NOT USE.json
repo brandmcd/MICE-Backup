@@ -275,10 +275,22 @@
 	"sid": 623079881395233,
 	"nonworld-instances": [
 		{
-			"type": "JSON",
+			"type": "JSONDialogue",
 			"properties": {},
 			"uid": 17,
 			"sid": 174630098465648,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "NxtScenes",
+			"properties": {
+				"width": 10,
+				"height": 1,
+				"depth": 1
+			},
+			"uid": 24,
+			"sid": 947534925382006,
 			"tags": "",
 			"instanceVariables": {}
 		}
