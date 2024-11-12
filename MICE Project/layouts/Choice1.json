@@ -353,10 +353,10 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1263,
-						"y": 270,
-						"width": 253,
-						"height": 386,
+						"x": 1196,
+						"y": 341,
+						"width": 274,
+						"height": 160,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -423,10 +423,10 @@
 						"expanded": true
 					},
 					"world": {
-						"x": 1268,
-						"y": 329,
-						"width": 34,
-						"height": 36,
+						"x": 1208,
+						"y": 391,
+						"width": 32,
+						"height": 32,
 						"originX": 0,
 						"originY": 1,
 						"color": [
@@ -465,21 +465,21 @@
 						"read-aloud": false
 					},
 					"uid": 23,
-					"sid": 286984090688432,
+					"sid": 785297489460306,
 					"tags": "",
 					"instanceVariables": {
 						"AnswerID": 0
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 286984090688432,
+						"sid": 785297489460306,
 						"expanded": true
 					},
 					"world": {
-						"x": 1301,
-						"y": 301,
-						"width": 189,
-						"height": 331,
+						"x": 1664,
+						"y": 191,
+						"width": 306.47984820468173,
+						"height": 47.58823103876853,
 						"originX": 0,
 						"originY": 0,
 						"color": [

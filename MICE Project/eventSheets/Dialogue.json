@@ -35,6 +35,30 @@
 					}
 				},
 				{
+					"id": "set-visible",
+					"objectClass": "AnswerBox",
+					"sid": 223974278975148,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SelectAns",
+					"sid": 910969884085602,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Continue",
+					"sid": 605444527973293,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
 					"id": "request-project-file",
 					"objectClass": "AJAX",
 					"sid": 534195209063267,
@@ -152,6 +176,12 @@
 								"comparison": 0,
 								"value": "\"Dialogue\""
 							}
+						},
+						{
+							"id": "is-running-typewriter-text",
+							"objectClass": "dialogueTxt",
+							"sid": 979613820367231,
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -162,6 +192,14 @@
 							"parameters": {
 								"variable": "curDialogue",
 								"value": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Continue",
+							"sid": 791491241468345,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						}
 					],
@@ -401,10 +439,10 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "dialogueTxt",
-							"sid": 538545517516508,
+							"sid": 347725071936401,
 							"parameters": {
 								"text": "Functions.format(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\"))",
-								"duration": "len(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\"))/20"
+								"duration": "len(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\"))/320"
 							}
 						},
 						{
@@ -551,7 +589,7 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "dialogueTxt",
-							"sid": 230870519656007,
+							"sid": 433706365280116,
 							"parameters": {
 								"text": "Functions.format(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".question\"))",
 								"duration": "len(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".question\"))/32"
@@ -587,10 +625,10 @@
 						{
 							"id": "set-size",
 							"objectClass": "AnswerBox",
-							"sid": 859261354194374,
+							"sid": 175903905866802,
 							"parameters": {
-								"width": "160",
-								"height": "(2*(JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".nbanswers\")))*32"
+								"width": "320",
+								"height": "(4*(JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".nbanswers\")))*32"
 							}
 						}
 					],
@@ -618,12 +656,12 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 427560470815940,
+									"sid": 243150342285400,
 									"parameters": {
 										"object-to-create": "Text_Answer",
 										"layer": "\"Dialogue\"",
 										"x": "AnswerBox.X+32",
-										"y": "AnswerBox.Y + (64*loopindex)",
+										"y": "AnswerBox.Y + 25 + (80*loopindex)",
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
@@ -1003,9 +1041,9 @@
 										{
 											"id": "set-y",
 											"objectClass": "SelectAns",
-											"sid": 513396396194001,
+											"sid": 408253395265420,
 											"parameters": {
-												"y": "Text_Answer.Y+16"
+												"y": "AnswerBox.Y + 25 + (80*ChosenAnswer)"
 											}
 										}
 									],
