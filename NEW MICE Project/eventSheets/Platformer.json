@@ -10,6 +10,10 @@
 			"includeSheet": "LayoutManager"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "MusicManager"
+		},
+		{
 			"eventType": "variable",
 			"name": "Health",
 			"type": "number",
@@ -383,6 +387,11 @@
 				{
 					"callFunction": "EnterLayout",
 					"sid": 163664530225250
+				},
+				{
+					"id": "stop-all",
+					"objectClass": "Music",
+					"sid": 409413996287079
 				}
 			],
 			"sid": 102950821756605

@@ -22,6 +22,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Json",
 			"name": "JSON",
 			"author": "Scirra",
@@ -117,7 +124,8 @@
 			"Sprite",
 			"RandomAssPlaceholder",
 			"Sprite3",
-			"WARNING"
+			"WARNING",
+			"Music"
 		],
 		"subfolders": [
 			{
@@ -216,7 +224,8 @@
 			"LayoutManager",
 			"ArmorManager",
 			"TempTowerManager",
-			"TempFirstScene"
+			"TempFirstScene",
+			"MusicManager"
 		],
 		"subfolders": []
 	},
@@ -247,7 +256,16 @@
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "mice_level_1_base_ambiance.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 823836999794480,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {

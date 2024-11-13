@@ -1,0 +1,42 @@
+{
+	"name": "MusicManager",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 492775957200153,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"Forest Level\""
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "Music",
+					"sid": 841669892162108,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Music",
+					"sid": 958318747434709,
+					"parameters": {
+						"audio-file": "mice_level_1_base_ambiance",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 462399287777679
+		}
+	],
+	"sid": 860590186698292
+}
