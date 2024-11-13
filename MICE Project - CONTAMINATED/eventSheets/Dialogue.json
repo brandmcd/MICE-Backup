@@ -1,0 +1,1203 @@
+{
+	"name": "Dialogue",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "GameState",
+			"type": "string",
+			"initialValue": "\"Dialogue\"",
+			"comment": "Defualt to dialogue",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 230489236959858
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 151623073059921
+				}
+			],
+			"actions": [
+				{
+					"type": "comment",
+					"text": "On start of layout, we load the content of dialogs.json and parse it in the JSON object.\nWe also set the layer \"dialogue\" that contains our portraits and text objects to be invisible."
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 566678623900761,
+					"parameters": {
+						"layer": "\"Dialogue\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "AnswerBox",
+					"sid": 595508295952914,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SelectAns",
+					"sid": 977910878123662,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Continue",
+					"sid": 940481736620957,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 148426286350729,
+					"parameters": {
+						"tag": "\"dialogues\"",
+						"file": "dialogues.json"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 352972057387867
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 489997497714305,
+					"parameters": {
+						"variable": "GameState",
+						"value": "\"Dialogue\""
+					}
+				}
+			],
+			"sid": 179260241853567
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 644203208942219,
+					"parameters": {
+						"tag": "\"dialogues\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "parse",
+					"objectClass": "JSONDialogue",
+					"sid": 905070208580486,
+					"parameters": {
+						"data": "AJAX.LastData"
+					}
+				}
+			],
+			"sid": 286549249651872
+		},
+		{
+			"eventType": "variable",
+			"name": "curScene",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The number of the current Scene being displayed",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 963261221594660
+		},
+		{
+			"eventType": "variable",
+			"name": "curDialogue",
+			"type": "number",
+			"initialValue": "-1",
+			"comment": "The number of the current Dialogue being displayed",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 460570103319030
+		},
+		{
+			"eventType": "variable",
+			"name": "Question",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "Is a question being displayed?",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 892264205117438
+		},
+		{
+			"eventType": "variable",
+			"name": "ChosenAnswer",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "The ID number of the answer selected by the player",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 993155199341272
+		},
+		{
+			"eventType": "comment",
+			"text": "Controlled using touch input (or mouse clicks)"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 466994553550879
+				}
+			],
+			"actions": [],
+			"sid": 855460557820629,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 948589852524395,
+							"parameters": {
+								"variable": "GameState",
+								"comparison": 0,
+								"value": "\"Dialogue\""
+							}
+						},
+						{
+							"id": "is-running-typewriter-text",
+							"objectClass": "dialogueTxt",
+							"sid": 319823767045774,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 589641178049175,
+							"parameters": {
+								"variable": "curDialogue",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Continue",
+							"sid": 339040302920460,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 730735850928439,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "If the Question boolean is false, the correct dialogue is called depending on a specific key in the JSON file. "
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 285843944211376,
+									"parameters": {
+										"variable": "Question"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "don't do shit when asking a question"
+								}
+							],
+							"sid": 442302817016035,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "When the type key in the JSON file is [b]line[/b] then we call the DialogueLine function to display the correct line of dialogue."
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-value",
+											"objectClass": "JSONDialogue",
+											"sid": 574271836486120,
+											"parameters": {
+												"path": "\"scene.\"& CurScene & \".dialogs.\" & CurDialogue &\".type\"",
+												"cmp": 0,
+												"value": "\"line\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "DialogueLine",
+											"sid": 161056936338568,
+											"parameters": [
+												"CurDialogue",
+												"CurScene"
+											]
+										}
+									],
+									"sid": 128952622796492
+								},
+								{
+									"eventType": "comment",
+									"text": "When the type key in the JSON file is [b]end[/b] then we call the EndDialogue function. This replaces the previous method which used a return function to count the number of lines in the dialogue."
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-value",
+											"objectClass": "JSONDialogue",
+											"sid": 277305145588431,
+											"parameters": {
+												"path": "\"scene.\"& CurScene & \".dialogs.\" & CurDialogue &\".type\"",
+												"cmp": 0,
+												"value": "\"end\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "EndDialogue",
+											"sid": 825890193836452,
+											"parameters": [
+												"CurScene",
+												"CurDialogue"
+											]
+										}
+									],
+									"sid": 857854244347033,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "comment",
+									"text": "When type is [b]function[/b] we call a function to call the relevant mapped function."
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-value",
+											"objectClass": "JSONDialogue",
+											"sid": 633487955717743,
+											"parameters": {
+												"path": "\"scene.\"& CurScene & \".dialogs.\" & CurDialogue &\".type\"",
+												"cmp": 0,
+												"value": "\"function\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "DialogueFunction",
+											"sid": 977292464872154,
+											"parameters": [
+												"CurDialogue",
+												"CurScene"
+											]
+										}
+									],
+									"sid": 945131355871451
+								},
+								{
+									"eventType": "comment",
+									"text": "When type is [b]question[/b] we call the function that begins the question sequence. "
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-value",
+											"objectClass": "JSONDialogue",
+											"sid": 745680720022672,
+											"parameters": {
+												"path": "\"scene.\"& CurScene & \".dialogs.\" & CurDialogue &\".type\"",
+												"cmp": 0,
+												"value": "\"question\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "DialogueQuestion",
+											"sid": 195155355616323,
+											"parameters": [
+												"CurDialogue",
+												"CurScene"
+											]
+										}
+									],
+									"sid": 846673698119105
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "If the Question boolean is true, then call the function which allows the player to choose an answer"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 796108362749291
+								}
+							],
+							"actions": [
+								{
+									"id": "set-boolean-eventvar",
+									"objectClass": "System",
+									"sid": 514009711321239,
+									"parameters": {
+										"variable": "Question",
+										"value": "false"
+									}
+								},
+								{
+									"callFunction": "PickAnswer",
+									"sid": 998791858672017
+								}
+							],
+							"sid": 123329896072420
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Functions",
+			"description": "This group contains all of the functions used in this project",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "This function displays a line from a specific dialogueID - on both occasions this function is called, dialogueID is set to curDialogue"
+				},
+				{
+					"functionName": "DialogueLine",
+					"functionDescription": "",
+					"functionCategory": "dialog",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "dialogueID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 117624648188092
+						},
+						{
+							"name": "sceneID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 933672237639653
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 945164863483473,
+							"parameters": {
+								"layer": "\"Dialogue\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "JSON.Get(current scene, current dialogue) char for the animation name and name to display in charNameTxt"
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Portrait",
+							"sid": 799912567114508,
+							"parameters": {
+								"animation": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".char\")",
+								"from": "beginning"
+							}
+						},
+						{
+							"type": "comment",
+							"text": "JSON.Get(current scene, current dialogue) line for the line to display in dialogueTxt - Pass it in the format function that will replace special terms in the line to display some specific format ([b]bold[/b] for example)\n"
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "dialogueTxt",
+							"sid": 286546425737613,
+							"parameters": {
+								"text": "Functions.format(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\"))",
+								"duration": "len(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\"))/32"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "CharNameTxt",
+							"sid": 470485121009271,
+							"parameters": {
+								"text": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".char\")"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "DebugTxt",
+							"sid": 902358623693860,
+							"parameters": {
+								"text": "(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\")"
+							}
+						}
+					],
+					"sid": 296219948392313
+				},
+				{
+					"functionName": "format",
+					"functionDescription": "",
+					"functionCategory": "dialog",
+					"functionReturnType": "string",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "string",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 482934946451811
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 937997935279727,
+					"children": [
+						{
+							"eventType": "variable",
+							"name": "line",
+							"type": "string",
+							"initialValue": "string",
+							"comment": "",
+							"isStatic": false,
+							"isConstant": false,
+							"sid": 840958576752627
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"type": "comment",
+									"text": "The parameter [b]\"string\"[/b] is passed through a replace() expression that allows us to apply various formatting aspects and by using the local variable [b]line[/b] we can run the text through several of these expressions. \n\nThe expression turns any instances of [b]\"/br\"[/b] into [b]newline[/b] (putting the text onto a new line), any [b]\"(b)\"[/b] into [b]\"[ b]\"[/b] (without the space) and [b]\"(/b)\"[/b] into [b]\"[ /b]\"[/b] (without the space)\n\nWe have to use replace expressions here because tradition BBCode cannot be written into the JSON file "
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 669034493486654,
+									"parameters": {
+										"variable": "line",
+										"value": "replace(string,\"(b)\",\"[b]\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 525382501505017,
+									"parameters": {
+										"variable": "line",
+										"value": "replace(line,\"(/b)\",\"[/b]\")"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 474119826201698,
+									"parameters": {
+										"variable": "line",
+										"value": "replace(line,\"/br\",newline)"
+									}
+								},
+								{
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 230393344418395,
+									"parameters": {
+										"value": "line"
+									}
+								}
+							],
+							"sid": 655534368280924
+						}
+					]
+				},
+				{
+					"functionName": "DialogueQuestion",
+					"functionDescription": "Calls a question in dialogue",
+					"functionCategory": "Dialogue",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "dialogueID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 797024370389118
+						},
+						{
+							"name": "sceneID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 690858633380279
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 707579371624290,
+							"parameters": {
+								"layer": "\"Dialogue\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Continue",
+							"sid": 918595017351875,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "CharNameTxt",
+							"sid": 653462199105174,
+							"parameters": {
+								"text": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".char\")"
+							}
+						},
+						{
+							"id": "typewriter-text",
+							"objectClass": "dialogueTxt",
+							"sid": 110233322446961,
+							"parameters": {
+								"text": "Functions.format(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".question\"))",
+								"duration": "len(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".question\"))/32"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 447998819176466,
+							"parameters": {
+								"variable": "Question",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "NxtScenes",
+							"sid": 218087502170336,
+							"parameters": {
+								"width": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".nbanswers\")",
+								"height": "1",
+								"depth": "1"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "AnswerBox",
+							"sid": 766101567342202,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-size",
+							"objectClass": "AnswerBox",
+							"sid": 874221094368895,
+							"parameters": {
+								"width": "320",
+								"height": "(4*(JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".nbanswers\")))*32"
+							}
+						}
+					],
+					"sid": 779757933973695,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "This loop creates new Text_Answer objects depending on how many answers are listed in the JSON file. The text objects are also given an AnswerID to differentiate them."
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 527713458062841,
+									"parameters": {
+										"name": "\"nb\"",
+										"start-index": "0",
+										"end-index": "(JSONDialogue.Get(\"scene.\"& curScene & \".dialogs.\" & curDialogue &\".nbanswers\" )) - 1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 901660369202704,
+									"parameters": {
+										"object-to-create": "Text_Answer",
+										"layer": "\"Dialogue\"",
+										"x": "AnswerBox.X+32",
+										"y": "AnswerBox.Y + 25 + (80*loopindex)",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Text_Answer",
+									"sid": 732857055330424,
+									"parameters": {
+										"instance-variable": "AnswerID",
+										"value": "loopindex"
+									}
+								}
+							],
+							"sid": 617286598993469,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "One the text objects have been created, their text is set based on their answerID and the answer's nextscene id is set into the array."
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Text_Answer",
+											"sid": 825968422813797,
+											"parameters": {
+												"instance-variable": "AnswerID",
+												"comparison": 0,
+												"value": "loopindex"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-text",
+											"objectClass": "Text_Answer",
+											"sid": 773987996910453,
+											"parameters": {
+												"text": "Functions.format(JSONDialogue.Get((((\"scene.\" & sceneID) & \".dialogs.\") & dialogueID) & \".answer\" & loopindex))"
+											}
+										},
+										{
+											"id": "set-at-x",
+											"objectClass": "NxtScenes",
+											"sid": 630691629854297,
+											"parameters": {
+												"x": "loopindex",
+												"value": "Functions.format(JSONDialogue.Get((((\"scene.\" & sceneID) & \".dialogs.\") & dialogueID) & \".nextscene\" & loopindex))"
+											}
+										}
+									],
+									"sid": 385661657929708
+								}
+							]
+						}
+					]
+				},
+				{
+					"functionName": "DialogueFunction",
+					"functionDescription": "Calls a function in dialogue",
+					"functionCategory": "Dialogue",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "dialogueID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 506819122133124
+						},
+						{
+							"name": "sceneID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 290418553512899
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "call-mapped-function",
+							"objectClass": "Functions",
+							"sid": 292608509215821,
+							"parameters": {
+								"name": "\"JSON Functions\"",
+								"string": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".function\")",
+								"forward-params": "0"
+							}
+						}
+					],
+					"sid": 569406433449473
+				},
+				{
+					"functionName": "PickAnswer",
+					"functionDescription": "Allows player to pick an answer in dialogue",
+					"functionCategory": "Dialogue",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 704859264423234,
+							"parameters": {
+								"variable": "Question",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "AnswerBox",
+							"sid": 338752142661280,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SelectAns",
+							"sid": 956367766440881,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Text_Answer",
+							"sid": 994629503717296
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 856084710894252,
+							"parameters": {
+								"variable": "curScene",
+								"value": "NxtScenes.At(ChosenAnswer) "
+							}
+						},
+						{
+							"callFunction": "DialogueLine",
+							"sid": 946575721743904,
+							"parameters": [
+								"0",
+								"curScene"
+							]
+						},
+						{
+							"id": "set-text",
+							"objectClass": "DebugTxt",
+							"sid": 297515158364260,
+							"parameters": {
+								"text": "DebugTxt.Text & \"\\n\" & \"  set curScene to \" & curScene"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 365385270317255,
+							"parameters": {
+								"variable": "curDialogue",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 806226919256236
+				},
+				{
+					"functionName": "EndDialogue",
+					"functionDescription": "",
+					"functionCategory": "Dialogue",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "sceneID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 272935265910632
+						},
+						{
+							"name": "dialogueID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 755652504261198
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 129913734170474,
+							"parameters": {
+								"layer": "\"Dialogue\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Text_Answer",
+							"sid": 633892785420486
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 323563367316092,
+							"parameters": {
+								"variable": "GameState",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 428100928695379,
+							"parameters": {
+								"variable": "curDialogue",
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 453096408015987
+				}
+			],
+			"sid": 168809900242684
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dialogue Control",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "When a non-question line has finished displaying, the ContinueText arrow is set to visible to show the player they can continue."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-typewriter-text-finished",
+							"objectClass": "dialogueTxt",
+							"sid": 464953212317493
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 312032727355490,
+							"parameters": {
+								"variable": "GameState",
+								"comparison": 0,
+								"value": "\"Dialogue\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 999713381794069,
+							"parameters": {
+								"variable": "Question"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Continue",
+							"sid": 784297259470836,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 477474469075655
+				},
+				{
+					"eventType": "comment",
+					"text": "When a question line has finished displaying, the SelectAns arrow is set to visible to show the player that they may pick an answer."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-typewriter-text-finished",
+							"objectClass": "dialogueTxt",
+							"sid": 166970088929653
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 507395211790018,
+							"parameters": {
+								"variable": "GameState",
+								"comparison": 0,
+								"value": "\"Dialogue\""
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 459467565971540,
+							"parameters": {
+								"variable": "Question"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "SelectAns",
+							"sid": 624728816323723,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 258426671168107
+				},
+				{
+					"eventType": "comment",
+					"text": "When the Question boolean is true, we need to enable the controls for picking an answer."
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 350291015167593,
+							"parameters": {
+								"variable": "Question"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 434974984482101,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 763231618994512
+								}
+							],
+							"actions": [],
+							"sid": 156280178934520,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Every tick, we make sure the SelectAns arrow is lined up to the answer picked by the player. "
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Text_Answer",
+											"sid": 408594810107422,
+											"parameters": {
+												"instance-variable": "AnswerID",
+												"comparison": 0,
+												"value": "ChosenAnswer"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-y",
+											"objectClass": "SelectAns",
+											"sid": 838441119820449,
+											"parameters": {
+												"y": "AnswerBox.Y + 25 + (80*ChosenAnswer)"
+											}
+										}
+									],
+									"sid": 862247934843747
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "The up and down arrow keys subtract from and add to the [b]ChosenAnswer[/b] Global Variable. This is then used to align the SelectAns arrow"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 507658201653929,
+									"parameters": {
+										"key": 38
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-eventvar",
+									"objectClass": "System",
+									"sid": 358062360133479,
+									"parameters": {
+										"variable": "ChosenAnswer",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 728389238754189
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 968823702457890,
+									"parameters": {
+										"key": 40
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 638974327169863,
+									"parameters": {
+										"variable": "ChosenAnswer",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 502664931183853
+						},
+						{
+							"eventType": "comment",
+							"text": "These two events make sure that there are limits set on [b]ChosenAnswer[/b] so that the player cannot add or subtract beyond the available [b]AnswerID[/b] numbers. "
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 903512341711121,
+									"parameters": {
+										"variable": "ChosenAnswer",
+										"comparison": 0,
+										"value": "-1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 788990651812503,
+									"parameters": {
+										"variable": "ChosenAnswer",
+										"value": "JSONDialogue.Get(\"scene.\" & CurScene & \".dialogs.\" & CurDialogue & \".nbanswers\") -1"
+									}
+								}
+							],
+							"sid": 620037598336341
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 887434373922245,
+									"parameters": {
+										"variable": "ChosenAnswer",
+										"comparison": 0,
+										"value": "JSONDialogue.Get(\"scene.\" & CurScene & \".dialogs.\" & CurDialogue & \".nbanswers\")"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 337362371699216,
+									"parameters": {
+										"variable": "ChosenAnswer",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 557505023131129
+						}
+					]
+				}
+			],
+			"sid": 643025575808329
+		}
+	],
+	"sid": 723946656726963
+}
