@@ -2,14 +2,12 @@
 	"name": "Dialogue",
 	"events": [
 		{
-			"eventType": "variable",
-			"name": "GameState",
-			"type": "string",
-			"initialValue": "\"Dialogue\"",
-			"comment": "Defualt to dialogue",
-			"isStatic": false,
-			"isConstant": false,
-			"sid": 677018813910659
+			"eventType": "include",
+			"includeSheet": "LayoutManager"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "ArmorManager"
 		},
 		{
 			"eventType": "block",
@@ -17,7 +15,7 @@
 				{
 					"id": "on-start-of-layout",
 					"objectClass": "System",
-					"sid": 865079621238177
+					"sid": 784867302021667
 				}
 			],
 			"actions": [
@@ -28,7 +26,7 @@
 				{
 					"id": "set-layer-visible",
 					"objectClass": "System",
-					"sid": 600228445911363,
+					"sid": 718439835968567,
 					"parameters": {
 						"layer": "\"Dialogue\"",
 						"visibility": "invisible"
@@ -37,7 +35,7 @@
 				{
 					"id": "set-visible",
 					"objectClass": "AnswerBox",
-					"sid": 223974278975148,
+					"sid": 212777931989053,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -45,7 +43,7 @@
 				{
 					"id": "set-visible",
 					"objectClass": "SelectAns",
-					"sid": 910969884085602,
+					"sid": 261203102744033,
 					"parameters": {
 						"visibility": "invisible"
 					}
@@ -53,36 +51,190 @@
 				{
 					"id": "set-visible",
 					"objectClass": "Continue",
-					"sid": 605444527973293,
+					"sid": 797496484446860,
 					"parameters": {
 						"visibility": "invisible"
 					}
 				},
 				{
-					"id": "request-project-file",
-					"objectClass": "AJAX",
-					"sid": 534195209063267,
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 199844431270174,
 					"parameters": {
-						"tag": "\"dialogues\"",
-						"file": "dialogues.json"
+						"variable": "curDialogue",
+						"value": "-1"
 					}
 				},
 				{
-					"id": "wait-for-previous-actions",
+					"id": "set-boolean-eventvar",
 					"objectClass": "System",
-					"sid": 280988164405250
+					"sid": 400373763625300,
+					"parameters": {
+						"variable": "Question",
+						"value": "false"
+					}
 				},
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 910749200336391,
+					"sid": 869363705123818,
 					"parameters": {
-						"variable": "GameState",
-						"value": "\"Dialogue\""
+						"variable": "ChosenAnswer",
+						"value": "0"
 					}
 				}
 			],
-			"sid": 759601742247582
+			"sid": 857918958371039,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 716082719413823,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Choice1\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 981130199350148,
+							"parameters": {
+								"tag": "\"dialogues\"",
+								"file": "dialogues.json"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 716665019883766
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 181160297515036,
+							"parameters": {
+								"variable": "GameState",
+								"value": "\"Dialogue\""
+							}
+						}
+					],
+					"sid": 866968798133568
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 416474627552274,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Choice2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 694796293260948,
+							"parameters": {
+								"tag": "\"dialogues\"",
+								"file": "dialogues2.json"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 392465145336130
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 847732181346822,
+							"parameters": {
+								"variable": "GameState",
+								"value": "\"Dialogue\""
+							}
+						}
+					],
+					"sid": 692182960594120,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 914296199978657,
+									"parameters": {
+										"first-value": "ArmorLevel",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 262467501771741,
+									"parameters": {
+										"variable": "curScene",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 564809992342126
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 714277215099886,
+									"parameters": {
+										"first-value": "ArmorLevel",
+										"comparison": 1,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 210096825355268,
+									"parameters": {
+										"variable": "curScene",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 910596051822778
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "variable",
+			"name": "GameState",
+			"type": "string",
+			"initialValue": "\"Dialogue\"",
+			"comment": "Defualt to dialogue",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 677018813910659
 		},
 		{
 			"eventType": "block",
@@ -312,10 +464,10 @@
 									"actions": [
 										{
 											"callFunction": "DialogueFunction",
-											"sid": 910778361313145,
+											"sid": 126258606513378,
 											"parameters": [
-												"CurDialogue",
-												"CurScene"
+												"curDialogue",
+												"curScene"
 											]
 										}
 									],
@@ -439,7 +591,7 @@
 						},
 						{
 							"id": "set-animation",
-							"objectClass": "Portrait",
+							"objectClass": "Characters",
 							"sid": 704773312928296,
 							"parameters": {
 								"animation": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".char\")",
@@ -453,7 +605,7 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "dialogueTxt",
-							"sid": 524832158722081,
+							"sid": 501861607788242,
 							"parameters": {
 								"text": "Functions.format(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\"))",
 								"duration": "len(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\"))/32"
@@ -470,13 +622,41 @@
 						{
 							"id": "set-text",
 							"objectClass": "DebugTxt",
-							"sid": 460500542475301,
+							"sid": 745236515953489,
 							"parameters": {
-								"text": "(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\")"
+								"text": "(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\") & \" armor :\" & ArmorLevel"
 							}
 						}
 					],
-					"sid": 416212283253225
+					"sid": 416212283253225,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 218198595690684,
+									"parameters": {
+										"first-value": "CharNameTxt.Text",
+										"comparison": 0,
+										"second-value": "\"Merchant2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "CharNameTxt",
+									"sid": 740781912824751,
+									"parameters": {
+										"text": "\"Merchant\""
+									}
+								}
+							],
+							"sid": 425611178099381
+						}
+					]
 				},
 				{
 					"functionName": "format",
@@ -611,9 +791,9 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "dialogueTxt",
-							"sid": 433706365280116,
+							"sid": 421534572057986,
 							"parameters": {
-								"text": "Functions.format(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".question\"))",
+								"text": "Functions.format(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".question\")) ",
 								"duration": "len(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".question\"))/32"
 							}
 						},
@@ -768,19 +948,54 @@
 					],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [
+					"actions": [],
+					"sid": 881774535371838,
+					"children": [
 						{
-							"id": "call-mapped-function",
-							"objectClass": "Functions",
-							"sid": 583524547891157,
-							"parameters": {
-								"name": "\"JSON Functions\"",
-								"string": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".function\")",
-								"forward-params": "0"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 965975247417860,
+									"parameters": {
+										"first-value": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".function\")",
+										"comparison": 0,
+										"second-value": "\"IncreaseArmor\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "IncreaseArmor",
+									"sid": 447406162307459
+								}
+							],
+							"sid": 124112566656449
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 745373078075280,
+									"parameters": {
+										"first-value": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".function\")",
+										"comparison": 0,
+										"second-value": "\"DecreaseArmor\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "DecreaseArmor",
+									"sid": 140878951455381
+								}
+							],
+							"sid": 447904633671298
 						}
-					],
-					"sid": 881774535371838
+					]
 				},
 				{
 					"functionName": "PickAnswer",
@@ -899,6 +1114,10 @@
 							"id": "destroy",
 							"objectClass": "Text_Answer",
 							"sid": 196813730699443
+						},
+						{
+							"callFunction": "EnterLayout",
+							"sid": 428409694577527
 						},
 						{
 							"id": "set-eventvar-value",

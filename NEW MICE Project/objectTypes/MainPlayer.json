@@ -4,7 +4,13 @@
 	"sid": 941208144607044,
 	"isGlobal": false,
 	"instanceVariables": [],
-	"behaviorTypes": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 307073096903723
+		}
+	],
 	"effectTypes": [],
 	"animations": {
 		"items": [
@@ -60,7 +66,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7760687,
+						"imageSpriteId": 5328542,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -74,7 +80,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 214448,
+						"imageSpriteId": 1833294,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -88,7 +94,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 8709939,
+						"imageSpriteId": 80279,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -116,7 +122,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1295180,
+						"imageSpriteId": 2262234,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""

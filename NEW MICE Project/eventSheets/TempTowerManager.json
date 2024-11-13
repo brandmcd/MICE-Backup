@@ -1,0 +1,76 @@
+{
+	"name": "TempTowerManager",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "ArmorManager"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 747855817487558
+				}
+			],
+			"actions": [],
+			"sid": 879698792472344,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 392074631226661,
+							"parameters": {
+								"first-value": "ArmorLevel",
+								"comparison": 0,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 487483832395493,
+							"parameters": {
+								"layout": "Tower End"
+							}
+						}
+					],
+					"sid": 735235687013422
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 467742686633819,
+							"parameters": {
+								"first-value": "ArmorLevel",
+								"comparison": 4,
+								"second-value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 360640349920347,
+							"parameters": {
+								"layout": "Cave End"
+							}
+						}
+					],
+					"sid": 122140957931097
+				}
+			]
+		}
+	],
+	"sid": 689845971581751
+}

@@ -1,0 +1,59 @@
+{
+	"name": "TempFirstScene",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 191987008822483
+				}
+			],
+			"actions": [],
+			"sid": 513309978243863,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "WARNING",
+							"sid": 558404988572117,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "WARNING",
+							"sid": 933722354887884,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 280644994998056
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 327224935859744
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "EnterLayout",
+							"sid": 208960598545631
+						}
+					],
+					"sid": 410764168950760
+				}
+			]
+		}
+	],
+	"sid": 111255687876931
+}

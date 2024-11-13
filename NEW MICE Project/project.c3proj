@@ -1,7 +1,7 @@
 {
 	"projectFormatVersion": 1,
 	"savedWithRelease": 40702,
-	"name": "Brandon - Platformer Tutorial",
+	"name": "MICE Project",
 	"runtime": "c3",
 	"useWorker": "auto",
 	"bundleAddons": false,
@@ -71,6 +71,20 @@
 		},
 		{
 			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Platform",
 			"name": "Platform",
 			"author": "Scirra",
@@ -97,13 +111,20 @@
 			"Keyboard",
 			"MainPlayer",
 			"PlayerBox",
-			"Sprite"
+			"idkwhatthisis",
+			"ArmorPopUp",
+			"NewZone",
+			"Sprite",
+			"RandomAssPlaceholder",
+			"Sprite3",
+			"WARNING"
 		],
 		"subfolders": [
 			{
 				"items": [
 					"Background",
-					"Tilemap3"
+					"Tilemap3",
+					"HURT"
 				],
 				"subfolders": [],
 				"name": "Forest Level"
@@ -143,13 +164,28 @@
 					},
 					{
 						"items": [
-							"Portrait"
+							"Characters"
 						],
 						"subfolders": [],
 						"name": "Sprites"
 					}
 				],
 				"name": "Dialogue"
+			},
+			{
+				"items": [
+					"Sprite2"
+				],
+				"subfolders": [],
+				"name": "Village"
+			},
+			{
+				"items": [
+					"TransitionIn",
+					"TransitionOut"
+				],
+				"subfolders": [],
+				"name": "LayoutManagement"
 			}
 		]
 	},
@@ -163,7 +199,12 @@
 		"items": [
 			"DO NOT USE",
 			"Forest Level",
-			"Choice1"
+			"Choice1",
+			"Choice2",
+			"Tower",
+			"Cave End",
+			"Tower End",
+			"TempFirstScene"
 		],
 		"subfolders": []
 	},
@@ -171,7 +212,11 @@
 		"items": [
 			"Event sheet 1",
 			"Platformer",
-			"Dialogue"
+			"Dialogue",
+			"LayoutManager",
+			"ArmorManager",
+			"TempTowerManager",
+			"TempFirstScene"
 		],
 		"subfolders": []
 	},
@@ -283,6 +328,14 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "dialogues2.json",
+					"type": "application/json",
+					"sid": 650064242477650,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -305,9 +358,9 @@
 	},
 	"properties": {
 		"description": "",
-		"version": "1.0.0.0",
-		"author": "",
-		"authorEmail": "",
+		"version": "1.1.7.0",
+		"author": "Brandon McDonald",
+		"authorEmail": "brandmcd@umich.edu",
 		"authorWebsite": "",
 		"appId": "",
 		"pixelRounding": false,
@@ -358,5 +411,5 @@
 	},
 	"viewportWidth": 1600,
 	"viewportHeight": 900,
-	"firstLayout": null
+	"firstLayout": "TempFirstScene"
 }

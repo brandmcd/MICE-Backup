@@ -1,0 +1,139 @@
+{
+	"name": "LayoutManager",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Change Functions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "EnterLayout",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 534021318872996,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 950895154191363,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Choice1\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 361751865760130,
+									"parameters": {
+										"layout": "Forest Level"
+									}
+								}
+							],
+							"sid": 719986159759423
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 126506086660103,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"TempFirstScene\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 911558140714357,
+									"parameters": {
+										"layout": "Choice1"
+									}
+								}
+							],
+							"sid": 439910327293527
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 529610607807278,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Forest Level\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 417887072123160,
+									"parameters": {
+										"layout": "Choice2"
+									}
+								}
+							],
+							"sid": 207149025685058
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 737342264780602,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Choice2\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 938042873922312,
+									"parameters": {
+										"layout": "Tower"
+									}
+								}
+							],
+							"sid": 873694854472743
+						}
+					]
+				}
+			],
+			"sid": 375853161123478
+		},
+		{
+			"eventType": "comment",
+			"text": "TODO: Add Transition Slides"
+		}
+	],
+	"sid": 533993452785165
+}

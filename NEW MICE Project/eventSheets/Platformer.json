@@ -2,6 +2,55 @@
 	"name": "Platformer",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "ArmorManager"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "LayoutManager"
+		},
+		{
+			"eventType": "variable",
+			"name": "Health",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 319984852507301
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 356433673615967
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 249026052768597,
+					"parameters": {
+						"variable": "Health",
+						"value": "3 + (3 * ArmorLevel)"
+					}
+				},
+				{
+					"id": "set-jump-strength",
+					"objectClass": "PlayerBox",
+					"sid": 859390899673381,
+					"behaviorType": "Platform",
+					"parameters": {
+						"jump-strength": "DefaultJump + (ArmorLevel * JumpMultPerArmor)"
+					}
+				}
+			],
+			"sid": 876159206562494
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -250,6 +299,93 @@
 				}
 			],
 			"sid": 373828555694115
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 129413206863293,
+					"parameters": {
+						"variable": "Health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 467407315594185,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 309616755986280
+				}
+			],
+			"sid": 700176529036263
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "MainPlayer",
+					"sid": 582572402444503,
+					"parameters": {
+						"object": "HURT"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 437595701663343,
+					"parameters": {
+						"variable": "Health",
+						"value": "Health - 1"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "MainPlayer",
+					"sid": 312783224984345,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "0.5"
+					}
+				}
+			],
+			"sid": 460914547532598
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "MainPlayer",
+					"sid": 419829471314418,
+					"parameters": {
+						"object": "NewZone"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "EnterLayout",
+					"sid": 163664530225250
+				}
+			],
+			"sid": 102950821756605
 		}
 	],
 	"sid": 197420161874541

@@ -1,0 +1,119 @@
+{
+	"name": "ArmorManager",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "ArmorLevel",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 889391280733366
+		},
+		{
+			"eventType": "variable",
+			"name": "JumpMultPerArmor",
+			"type": "number",
+			"initialValue": "-125",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 745024412257227
+		},
+		{
+			"eventType": "variable",
+			"name": "DefaultJump",
+			"type": "number",
+			"initialValue": "900",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 693015192963143
+		},
+		{
+			"functionName": "IncreaseArmor",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 305026430410801,
+					"parameters": {
+						"variable": "ArmorLevel",
+						"value": "ArmorLevel + 1"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 195660807382120,
+					"parameters": {
+						"object-to-create": "ArmorPopUp",
+						"layer": "5",
+						"x": "770",
+						"y": "143",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "ArmorPopUp",
+					"sid": 125956468972082,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.3",
+						"off-time": "0.3",
+						"duration": "1.2"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 471083028793385,
+					"parameters": {
+						"seconds": "1.2"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ArmorPopUp",
+					"sid": 945490249380932
+				}
+			],
+			"sid": 885923477931094
+		},
+		{
+			"functionName": "DecreaseArmor",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 539172025622142,
+					"parameters": {
+						"variable": "ArmorLevel",
+						"value": "ArmorLevel - 1"
+					}
+				}
+			],
+			"sid": 553391652876371
+		}
+	],
+	"sid": 177958771999774
+}

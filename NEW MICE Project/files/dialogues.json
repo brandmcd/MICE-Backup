@@ -54,6 +54,11 @@
 					"line": "A wise choice, friend. May this armor protect you well in the trials to come."
 				},
 				{
+					"char": "Merchant",
+					"type": "function",
+					"function": "IncreaseArmor"
+				},
+				{
 					"char": "Knight",
 					"type": "line",
 					"line": "I only hope that your armor doesn’t keep others at a distance. True strength isn’t always found behind steel."

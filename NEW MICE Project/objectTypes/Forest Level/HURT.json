@@ -1,0 +1,29 @@
+{
+	"name": "HURT",
+	"plugin-id": "Tilemap",
+	"sid": 568474200598946,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 315301339236573
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 288,
+		"height": 224,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 7279395,
+		"useCollisionPoly": true,
+		"tag": ""
+	},
+	"tile-collision-polys": {}
+}
