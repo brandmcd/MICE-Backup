@@ -39,9 +39,9 @@
 					"question": "So, what will you do? Will you accept the armor for protection or trust in your strength and openness with others?",
 					"nbanswers": 2,
 					"answer0": "I’ll take the armor. Safety is worth it.",
-					"nextscene0": 1,
+					"nextscene": 1,
 					"answer1": "I’ll go without. My strength lies in my trust in others.",
-					"nextscene1": 2
+					"nextscene": 2
 				}
 			]
 		},

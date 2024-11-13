@@ -772,15 +772,6 @@
 					"conditions": [],
 					"actions": [
 						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 600441333453541,
-							"parameters": {
-								"variable": "Question",
-								"value": "false"
-							}
-						},
-						{
 							"id": "set-visible",
 							"objectClass": "AnswerBox",
 							"sid": 142086606432372,
@@ -819,12 +810,29 @@
 							}
 						},
 						{
+							"id": "set-text",
+							"objectClass": "DebugTxt",
+							"sid": 938412076599181,
+							"parameters": {
+								"text": "\"set curScene to\" & curScene"
+							}
+						},
+						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 900563021569972,
 							"parameters": {
 								"variable": "curDialogue",
 								"value": "-1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 576188695909172,
+							"parameters": {
+								"variable": "Question",
+								"value": "false"
 							}
 						}
 					],
