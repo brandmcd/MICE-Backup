@@ -205,14 +205,15 @@
 	},
 	"layouts": {
 		"items": [
-			"DO NOT USE",
-			"Forest Level",
-			"Choice1",
-			"Choice2",
-			"Tower",
+			"1. FirstScene",
+			"2. Choice1",
+			"3. Village",
+			"4. Choice2",
+			"5. Forest Level",
+			"6. Tower",
 			"Cave End",
 			"Tower End",
-			"TempFirstScene"
+			"DO NOT USE"
 		],
 		"subfolders": []
 	},
@@ -429,5 +430,5 @@
 	},
 	"viewportWidth": 1600,
 	"viewportHeight": 900,
-	"firstLayout": "TempFirstScene"
+	"firstLayout": "1. FirstScene"
 }

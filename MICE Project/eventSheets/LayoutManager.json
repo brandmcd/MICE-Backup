@@ -41,7 +41,7 @@
 									"objectClass": "System",
 									"sid": 361751865760130,
 									"parameters": {
-										"layout": "Forest Level"
+										"layout": "5. Forest Level"
 									}
 								}
 							],
@@ -67,7 +67,7 @@
 									"objectClass": "System",
 									"sid": 911558140714357,
 									"parameters": {
-										"layout": "Choice1"
+										"layout": "2. Choice1"
 									}
 								}
 							],
@@ -93,7 +93,7 @@
 									"objectClass": "System",
 									"sid": 417887072123160,
 									"parameters": {
-										"layout": "Choice2"
+										"layout": "4. Choice2"
 									}
 								}
 							],
@@ -119,7 +119,7 @@
 									"objectClass": "System",
 									"sid": 938042873922312,
 									"parameters": {
-										"layout": "Tower"
+										"layout": "6. Tower"
 									}
 								}
 							],
