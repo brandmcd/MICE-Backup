@@ -92,11 +92,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 716082719413823,
+							"sid": 917469771192183,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Choice1\""
+								"second-value": "\"2. Choice1\""
 							}
 						}
 					],
@@ -133,11 +133,11 @@
 						{
 							"id": "compare-two-values",
 							"objectClass": "System",
-							"sid": 416474627552274,
+							"sid": 396451129732635,
 							"parameters": {
 								"first-value": "LayoutName",
 								"comparison": 0,
-								"second-value": "\"Choice2\""
+								"second-value": "\"4. Choice2\""
 							}
 						}
 					],
@@ -618,14 +618,6 @@
 							"parameters": {
 								"text": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".char\")"
 							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "DebugTxt",
-							"sid": 745236515953489,
-							"parameters": {
-								"text": "(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\") & \" armor :\" & ArmorLevel"
-							}
 						}
 					],
 					"sid": 416212283253225,
@@ -1056,14 +1048,6 @@
 							]
 						},
 						{
-							"id": "set-text",
-							"objectClass": "DebugTxt",
-							"sid": 429892547550922,
-							"parameters": {
-								"text": "DebugTxt.Text & \"\\n\" & \"  set curScene to \" & curScene"
-							}
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 588816586505471,
@@ -1117,7 +1101,10 @@
 						},
 						{
 							"callFunction": "EnterLayout",
-							"sid": 428409694577527
+							"sid": 361801469902235,
+							"parameters": [
+								"Functions.format(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".nextscene\"))"
+							]
 						},
 						{
 							"id": "set-eventvar-value",
@@ -1290,9 +1277,9 @@
 										{
 											"id": "set-y",
 											"objectClass": "SelectAns",
-											"sid": 408253395265420,
+											"sid": 609821353303127,
 											"parameters": {
-												"y": "AnswerBox.Y + 25 + (80*ChosenAnswer)"
+												"y": "AnswerBox.Y + 60 + (80*ChosenAnswer)"
 											}
 										}
 									],

@@ -5,110 +5,7 @@
 			"name": "Layer 0",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [
-				{
-					"type": "RandomAssPlaceholder",
-					"properties": {
-						"text": "Thank you for playing our game, our introduction is currently under construction so this random text is here to help!",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 46,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 44,
-					"sid": 192720393096797,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 192720393096797,
-						"expanded": true
-					},
-					"world": {
-						"x": 63,
-						"y": 17,
-						"width": 1428,
-						"height": 263,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "RandomAssPlaceholder",
-					"properties": {
-						"text": "Preface: You are knight and you left old town because you weren't accepted in your community. You headed to a new village where another knight and a merchant approach you, and that is where we lay our scene. also theres like a dragon and ur supposed to kill it or whatever. (this will be better described with art and colors)\n\nOur final game with have 3 choice scenes and 3 platformer scenes, for this checkpoint we are only including 2 choices.\n\nTo continue with dialogue touch anywhere on screen, to change choices use the arrow keys, to confirm a choice touch the screen.\n\nArrow Keys to platfomer.\n\nCLICK ANYWHERE TO START",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 30,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 45,
-					"sid": 971879035167811,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 971879035167811,
-						"expanded": true
-					},
-					"world": {
-						"x": 51,
-						"y": 224,
-						"width": 1443,
-						"height": 720,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				}
-			],
+			"instances": [],
 			"sid": 598349538888496,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -144,46 +41,35 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "WARNING",
+					"type": "BeginSlides",
 					"properties": {
-						"text": "Please make sure to you understand all instructions before starting :)",
-						"enable-bbcode": true,
-						"font": "Cooper",
-						"size": 30,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							1,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": false,
-						"origin": "top-left",
-						"read-aloud": false
+						"initially-visible": true,
+						"initial-animation": "1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
 					},
-					"uid": 46,
-					"sid": 824921180706378,
+					"uid": 44,
+					"sid": 248141237179589,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 824921180706378,
-						"expanded": true
+						"sid": 248141237179589,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
 					},
+					"showing": true,
+					"locked": false,
 					"world": {
-						"x": 730,
-						"y": 745,
-						"width": 798,
-						"height": 147,
-						"originX": 0,
-						"originY": 0,
+						"x": 800,
+						"y": 450,
+						"width": 1600,
+						"height": 900,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -232,11 +118,11 @@
 	"sid": 785688561562718,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 3200,
-	"height": 1800,
+	"width": 1600,
+	"height": 900,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": "TempFirstScene"
+	"eventSheet": "BeginStorySlides"
 }

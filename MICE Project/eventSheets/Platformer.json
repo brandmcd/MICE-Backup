@@ -386,7 +386,10 @@
 			"actions": [
 				{
 					"callFunction": "EnterLayout",
-					"sid": 163664530225250
+					"sid": 163664530225250,
+					"parameters": [
+						"\"\""
+					]
 				},
 				{
 					"id": "stop-all",

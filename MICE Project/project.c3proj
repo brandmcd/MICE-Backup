@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 40702,
+	"savedWithRelease": 41600,
 	"name": "MICE Project",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -153,7 +153,6 @@
 					"CharNameTxt",
 					"DemoTxt",
 					"dialogueBox",
-					"DebugTxt",
 					"Continue",
 					"SelectAns",
 					"AnswerBox",
@@ -194,6 +193,13 @@
 				],
 				"subfolders": [],
 				"name": "LayoutManagement"
+			},
+			{
+				"items": [
+					"BeginSlides"
+				],
+				"subfolders": [],
+				"name": "StorySlides"
 			}
 		]
 	},
@@ -225,7 +231,7 @@
 			"LayoutManager",
 			"ArmorManager",
 			"TempTowerManager",
-			"TempFirstScene",
+			"BeginStorySlides",
 			"MusicManager"
 		],
 		"subfolders": []
@@ -424,7 +430,6 @@
 		"preloadSounds": true,
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
-		"autoReloadScriptsOnPreview": false,
 		"exportFileStructure": "folders",
 		"uidAllocationMode": "increment"
 	},

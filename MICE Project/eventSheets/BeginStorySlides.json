@@ -1,0 +1,81 @@
+{
+	"name": "BeginStorySlides",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "LayoutManager"
+		},
+		{
+			"eventType": "variable",
+			"name": "slideCount",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "The number of the slide (also anim name)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 991832574616379
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 191987008822483
+				}
+			],
+			"actions": [],
+			"sid": 513309978243863,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 719270564955687,
+							"parameters": {
+								"first-value": "BeginSlides.AnimationName",
+								"comparison": 1,
+								"second-value": "str(slideCount)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "BeginSlides",
+							"sid": 868651256326082,
+							"parameters": {
+								"animation": "str(int(BeginSlides.AnimationName) + 1)",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 816144362089822
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 193203948524447
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "EnterLayout",
+							"sid": 903308581349830,
+							"parameters": [
+								"\"2. Choice1\""
+							]
+						}
+					],
+					"sid": 422320660086507
+				}
+			]
+		}
+	],
+	"sid": 111255687876931
+}

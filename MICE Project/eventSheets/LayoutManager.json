@@ -15,117 +15,28 @@
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
-					"functionParameters": [],
+					"functionParameters": [
+						{
+							"name": "gotoLayout",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 501572656022056
+						}
+					],
 					"eventType": "function-block",
 					"conditions": [],
-					"actions": [],
-					"sid": 534021318872996,
-					"children": [
+					"actions": [
 						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 950895154191363,
-									"parameters": {
-										"first-value": "LayoutName",
-										"comparison": 0,
-										"second-value": "\"Choice1\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 361751865760130,
-									"parameters": {
-										"layout": "5. Forest Level"
-									}
-								}
-							],
-							"sid": 719986159759423
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 126506086660103,
-									"parameters": {
-										"first-value": "LayoutName",
-										"comparison": 0,
-										"second-value": "\"TempFirstScene\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 911558140714357,
-									"parameters": {
-										"layout": "2. Choice1"
-									}
-								}
-							],
-							"sid": 439910327293527
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 529610607807278,
-									"parameters": {
-										"first-value": "LayoutName",
-										"comparison": 0,
-										"second-value": "\"Forest Level\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 417887072123160,
-									"parameters": {
-										"layout": "4. Choice2"
-									}
-								}
-							],
-							"sid": 207149025685058
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 737342264780602,
-									"parameters": {
-										"first-value": "LayoutName",
-										"comparison": 0,
-										"second-value": "\"Choice2\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "go-to-layout",
-									"objectClass": "System",
-									"sid": 938042873922312,
-									"parameters": {
-										"layout": "6. Tower"
-									}
-								}
-							],
-							"sid": 873694854472743
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 197906088707856,
+							"parameters": {
+								"layout": "gotoLayout"
+							}
 						}
-					]
+					],
+					"sid": 534021318872996
 				}
 			],
 			"sid": 375853161123478
