@@ -223,6 +223,130 @@
 							"sid": 910596051822778
 						}
 					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 250700101575773,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"6. Choice3\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 812002865844095,
+							"parameters": {
+								"tag": "\"dialogues\"",
+								"file": "dialogues3.json"
+							}
+						},
+						{
+							"id": "wait-for-previous-actions",
+							"objectClass": "System",
+							"sid": 923313042894764
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 681897820314497,
+							"parameters": {
+								"variable": "GameState",
+								"value": "\"Dialogue\""
+							}
+						}
+					],
+					"sid": 832385649017095,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 822791430840314,
+									"parameters": {
+										"first-value": "ArmorLevel",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 278886679744006,
+									"parameters": {
+										"variable": "curScene",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 877054130564700
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 587892568657056,
+									"parameters": {
+										"first-value": "ArmorLevel",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 235140098743381,
+									"parameters": {
+										"variable": "curScene",
+										"value": "3"
+									}
+								}
+							],
+							"sid": 103364462409610
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 537377964169966,
+									"parameters": {
+										"first-value": "ArmorLevel",
+										"comparison": 4,
+										"second-value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 464277015865243,
+									"parameters": {
+										"variable": "curScene",
+										"value": "6"
+									}
+								}
+							],
+							"sid": 811883985491289
+						}
+					]
 				}
 			]
 		},
@@ -592,9 +716,9 @@
 						{
 							"id": "set-animation",
 							"objectClass": "Characters",
-							"sid": 704773312928296,
+							"sid": 242418598958312,
 							"parameters": {
-								"animation": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".char\")",
+								"animation": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".char\") & JSONDialogue.Get(\"setnumber\")",
 								"from": "beginning"
 							}
 						},

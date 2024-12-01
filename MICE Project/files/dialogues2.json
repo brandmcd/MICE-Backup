@@ -1,42 +1,33 @@
 {
+	"setnumber": 2,
 	"scene": [
 		{
 			"id": 0,
 			"dialogs": [
 				{
-					"char": "Knight2",
+					"char": "Knight",
 					"type": "line",
-					"line": "Ah! So you chose to go without armor. My friend, the other knight, is proud of you!"
+					"line": "Ah, a traveler! My friend, the other knight, told me about you. I see you’ve chosen to walk without armor. They’re quite proud of you!"
 				},
 				{
-					"char": "Knight2",
+					"char": "Knight",
 					"type": "line",
-					"line": "We’re waiting up in the tower to celebrate! You moved through the forest with such agility without all that heavy metal."
+					"line": "It’s not an easy path, but it shows you trust in your allies and your own agility."
 				},
 				{
-					"char": "Merchant2",
+					"char": "Merchant",
 					"type": "line",
-					"line": "Agility is fine… until an arrow finds its mark."
+					"line": "Hmph. Trust and agility won’t stop an arrow from finding its mark. You’ll need every bit of wit and luck in this forest."
 				},
 				{
-					"char": "Merchant2",
+					"char": "Knight",
 					"type": "line",
-					"line": "But I’m sure you'll manage with your ‘trust’ in others—just hope they’re there when you need them."
+					"line": "Don’t let his words scare you. You’ve chosen wisely. Together, we’ll navigate these dangers as a team."
 				},
 				{
-					"char": "Knight2",
-					"type": "line",
-					"line": "Ha! Don’t listen to him. We’re stronger together, and we’ll keep each other safe."
-				},
-				{
-					"char": "Knight2",
-					"type": "line",
-					"line": "Isn’t that right?"
-				},
-				{
-					"char": "Merchant2",
+					"char": "Merchant",
 					"type": "question",
-					"question": "One last chance: will you reconsider and take some armor to shield yourself?",
+					"question": "But before you go, one last offer: Will you reconsider and take some armor to shield yourself?",
 					"nbanswers": 2,
 					"answer0": "I’ll take the armor. Maybe some protection is worth it.",
 					"nextscene0": 1,
@@ -49,9 +40,9 @@
 			"id": 1,
 			"dialogs": [
 				{
-					"char": "Merchant2",
+					"char": "Merchant",
 					"type": "line",
-					"line": "There. A wise choice at last. May this armor serve you well."
+					"line": "A wise choice. At least now you’ll have some protection in this perilous forest."
 				},
 				{
 					"char": "Merchant",
@@ -59,14 +50,9 @@
 					"function": "IncreaseArmor"
 				},
 				{
-					"char": "Knight2",
+					"char": "Knight",
 					"type": "line",
-					"line": "Well, if that’s what you believe... but remember, we’re still here for you."
-				},
-				{
-					"char": "Knight2",
-					"type": "line",
-					"line": "Don’t let the armor keep us too far away."
+					"line": "If that’s what you believe is best, I respect your decision. But remember, we’re here to help—don’t let the armor keep us too far away."
 				},
 				{
 					"type": "end"
@@ -77,14 +63,14 @@
 			"id": 2,
 			"dialogs": [
 				{
-					"char": "Knight2",
+					"char": "Knight",
 					"type": "line",
 					"line": "Excellent! You’ve chosen trust over barriers. My friend will be thrilled, and we’ll stand strong together."
 				},
 				{
-					"char": "Merchant2",
+					"char": "Merchant",
 					"type": "line",
-					"line": "Bah. Suit yourself. Don’t come crying if a blade finds its mark."
+					"line": "Hmph. Suit yourself. Just remember—there’s no undoing a fatal wound."
 				},
 				{
 					"type": "end"
@@ -95,39 +81,24 @@
 			"id": 3,
 			"dialogs": [
 				{
-					"char": "Knight2",
+					"char": "Knight",
 					"type": "line",
-					"line": "Oh… so you took the armor. My friend—the other knight—is a bit… disappointed."
+					"line": "So, you chose to take the armor. My friend was hoping you’d rely more on your allies. They trust you, you know."
 				},
 				{
-					"char": "Knight2",
+					"char": "Merchant",
 					"type": "line",
-					"line": "They had hoped you’d trust in them and in our support instead."
+					"line": "Bah! Trust is no substitute for steel when blades are drawn."
 				},
 				{
-					"char": "Merchant2",
+					"char": "Knight",
 					"type": "line",
-					"line": "Disappointment? Bah! When a blow lands, disappointment won’t shield you."
+					"line": "Are you sure that armor is what you need? Sometimes protection can weigh you down more than the danger you face."
 				},
 				{
-					"char": "Merchant2",
-					"type": "line",
-					"line": "I think you could do with even more armor—one can never be too safe."
-				},
-				{
-					"char": "Knight2",
-					"type": "line",
-					"line": "Are you sure that armor is truly what you need?"
-				},
-				{
-					"char": "Knight2",
-					"type": "line",
-					"line": "We want to help you, not see you shut yourself away behind layers of metal."
-				},
-				{
-					"char": "Merchant2",
+					"char": "Merchant",
 					"type": "question",
-					"question": "So, what now? Keep what you have, add more, or shed some to show trust in your allies?",
+					"question": "What will you do now? Keep what you have, add more, or shed some to trust your allies?",
 					"nbanswers": 3,
 					"answer0": "I’ll buy more armor. Better safe than sorry.",
 					"nextscene0": 4,
@@ -142,9 +113,9 @@
 			"id": 4,
 			"dialogs": [
 				{
-					"char": "Merchant2",
+					"char": "Merchant",
 					"type": "line",
-					"line": "A wise choice, truly! Extra armor will protect you well."
+					"line": "Ah, an even wiser choice! Extra armor will serve you well."
 				},
 				{
 					"char": "Merchant",
@@ -152,12 +123,12 @@
 					"function": "IncreaseArmor"
 				},
 				{
-					"char": "Knight2",
+					"char": "Knight",
 					"type": "line",
-					"line": "So be it... but remember, there’s more to strength than steel."
+					"line": "If that’s what you think is best, so be it. But remember, there’s more to strength than steel."
 				},
 				{
-					"char": "Knight2",
+					"char": "Knight",
 					"type": "line",
 					"line": "I hope you’ll still let us in, friend."
 				},
@@ -170,24 +141,24 @@
 			"id": 5,
 			"dialogs": [
 				{
-					"char": "Knight2",
+					"char": "Knight",
 					"type": "line",
-					"line": "Ah, you’ve decided to let go of some of that armor. My friend will be pleased!"
+					"line": "Ah, you’ve decided to shed some armor. My friend will be pleased!"
 				},
 				{
-					"char": "Knight2",
+					"char": "Knight",
 					"type": "line",
 					"line": "We’ll face any danger together, as comrades."
 				},
 				{
-					"char": "Knight2",
+					"char": "Merchant",
 					"type": "function",
 					"function": "DecreaseArmor"
 				},
 				{
-					"char": "Merchant2",
+					"char": "Merchant",
 					"type": "line",
-					"line": "Hmph. That’s your choice, I suppose. Just don’t blame me if you find yourself outmatched."
+					"line": "Hmph. That’s your choice, I suppose. Just don’t blame me if you regret it."
 				},
 				{
 					"type": "end"
@@ -198,17 +169,17 @@
 			"id": 6,
 			"dialogs": [
 				{
-					"char": "Merchant2",
+					"char": "Merchant",
 					"type": "line",
-					"line": "Keeping what you have? Well, balance is something, I suppose."
+					"line": "Keeping what you have? A balanced choice, I suppose."
 				},
 				{
-					"char": "Merchant2",
+					"char": "Merchant",
 					"type": "line",
 					"line": "Just remember to stay vigilant."
 				},
 				{
-					"char": "Knight2",
+					"char": "Knight",
 					"type": "line",
 					"line": "That’s fair. Stay steady, friend. We’re with you, armor or not."
 				},

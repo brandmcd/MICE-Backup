@@ -1,0 +1,253 @@
+{
+	"setnumber": 3,
+	"scene": [
+		{
+			"id": 0,
+			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "You’ve made it far without armor. Ahead lies a dragon in its cave, guarding riches and glory."
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "And above is the tower, where knights gather in trust and unity. Without armor, you’ll reach the top with ease."
+				},
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "But that dragon won’t fall to words or trust. You’ll need armor to survive its claws and flames."
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "Armor may protect you, but it also weighs you down. The tower is your chance to embrace vulnerability and connection."
+				},
+				{
+					"char": "Merchant",
+					"type": "question",
+					"question": "Will you take armor for the dragon or climb the tower without it?",
+					"nbanswers": 2,
+					"answer0": "I’ll take the armor. I need protection for the cave.",
+					"nextscene0": 1,
+					"answer1": "I’ll climb the tower. No armor is needed there.",
+					"nextscene1": 2
+				}
+			]
+		},
+		{
+			"id": 1,
+			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Smart choice. This armor will keep you safe."
+				},
+				{
+					"char": "Merchant",
+					"type": "function",
+					"function": "IncreaseArmor"
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "I hope it serves you well, though I wish you’d chosen connection over defense."
+				},
+				{
+					"type": "end"
+				}
+			]
+		},
+		{
+			"id": 2,
+			"dialogs": [
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "Good choice. The tower will show you the strength of trust and unity."
+				},
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Bah! Trust won’t save you from a dragon’s wrath. But good luck, I suppose."
+				},
+				{
+					"type": "end"
+				}
+			]
+		},
+		{
+			"id": 3,
+			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "With one layer of armor, you’re protected, but is it enough? The dragon below will test your limits."
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "The tower above still calls to you. To climb, you’ll need to shed your defenses and trust in others."
+				},
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Bah! Riches and glory are in the cave. Why risk it all for connection when treasure is so close?"
+				},
+				{
+					"char": "Knight",
+					"type": "question",
+					"question": "Will you take more armor for the dragon or shed your armor to climb the tower?",
+					"nbanswers": 2,
+					"answer0": "I’ll take more armor. I need all the protection I can get.",
+					"nextscene0": 4,
+					"answer1": "I’ll shed this armor. I’m ready to climb the tower.",
+					"nextscene1": 5
+				}
+			]
+		},
+		{
+			"id": 4,
+			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Excellent choice. The dragon will be no match for you now."
+				},
+				{
+					"char": "Merchant",
+					"type": "function",
+					"function": "IncreaseArmor"
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "I hope it serves you well, though I wish you’d chosen vulnerability over more defense."
+				},
+				{
+					"type": "end"
+				}
+			]
+		},
+		{
+			"id": 5,
+			"dialogs": [
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "You’ve made the right choice. Connection lies at the top of the tower, not behind walls of steel."
+				},
+				{
+					"char": "Knight",
+					"type": "function",
+					"function": "DecreaseArmor"
+				},
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Bah! We’ll see how well trust serves you when danger strikes."
+				},
+				{
+					"type": "end"
+				}
+			]
+		},
+		{
+			"id": 6,
+			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "With two layers of armor, the dragon doesn’t stand a chance. But the climb? You’ll never make it like this."
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "If you truly seek community, you must let go of the weight holding you back. Vulnerability is the only way forward."
+				},
+				{
+					"char": "Merchant",
+					"type": "question",
+					"question": "What will you do? Keep your armor, shed it for the climb, or take a third layer?",
+					"nbanswers": 3,
+					"answer0": "I’ll keep my armor. The dragon is my goal.",
+					"nextscene0": 7,
+					"answer1": "I’ll shed my armor. I want to climb the tower.",
+					"nextscene1": 8,
+					"answer2": "I’ll take more armor. I want to be unstoppable.",
+					"nextscene2": 9
+				}
+			]
+		},
+		{
+			"id": 7,
+			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Glory awaits! This armor will carry you to victory."
+				},
+				{
+					"char": "Merchant",
+					"type": "function",
+					"function": "IncreaseArmor"
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "Be careful. Glory may not be as fulfilling as you think."
+				},
+				{
+					"type": "end"
+				}
+			]
+		},
+		{
+			"id": 8,
+			"dialogs": [
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "You’ve made the right choice. Connection is worth more than defense."
+				},
+				{
+					"char": "Knight",
+					"type": "function",
+					"function": "DecreaseArmor"
+				},
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Hmph. You’ll regret this when danger strikes."
+				},
+				{
+					"type": "end"
+				}
+			]
+		},
+		{
+			"id": 9,
+			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "With three layers of armor, nothing will harm you. The dragon doesn’t stand a chance."
+				},
+				{
+					"char": "Merchant",
+					"type": "function",
+					"function": "IncreaseArmor"
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "But at what cost? Even victory won’t help if you lose connection with others."
+				},
+				{
+					"type": "end"
+				}
+			]
+		}
+	]
+}

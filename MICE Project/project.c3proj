@@ -216,7 +216,8 @@
 			"3. Village",
 			"4. Choice2",
 			"5. Forest Level",
-			"6. Tower",
+			"6. Choice3",
+			"7. Tower",
 			"Cave End",
 			"Tower End",
 			"DO NOT USE"
@@ -358,6 +359,14 @@
 					"name": "dialogues2.json",
 					"type": "application/json",
 					"sid": 650064242477650,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "dialogues3.json",
+					"type": "application/json",
+					"sid": 261591780081616,
 					"file-info": {
 						"purpose": "none"
 					}

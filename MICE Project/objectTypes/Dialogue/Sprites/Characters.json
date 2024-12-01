@@ -151,7 +151,7 @@
 					}
 				],
 				"sid": 505022806680614,
-				"name": "Merchant",
+				"name": "Merchant1",
 				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -258,7 +258,7 @@
 					}
 				],
 				"sid": 974578435520964,
-				"name": "Knight",
+				"name": "Knight1",
 				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -530,6 +530,269 @@
 				],
 				"sid": 519964973681585,
 				"name": "Defualt-Knight2",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 3000,
+						"height": 2000,
+						"originX": 0.5116666666666667,
+						"originY": 0.84,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4336950,
+						"collisionPoly": {
+							"points": [
+								0.29,
+								0.129,
+								0.7766666666666666,
+								0.1705,
+								0.9406666666666667,
+								0.299,
+								0.9273333333333333,
+								0.838,
+								0.679,
+								0.838,
+								0.146,
+								0.832,
+								0.19133333333333333,
+								0.241
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 3000,
+						"height": 2000,
+						"originX": 0.5116666666666667,
+						"originY": 0.84,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3898425,
+						"collisionPoly": {
+							"points": [
+								0.29,
+								0.129,
+								0.7766666666666666,
+								0.1705,
+								0.9406666666666667,
+								0.299,
+								0.9273333333333333,
+								0.838,
+								0.679,
+								0.838,
+								0.146,
+								0.832,
+								0.19133333333333333,
+								0.241
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 3000,
+						"height": 2000,
+						"originX": 0.5116666666666667,
+						"originY": 0.84,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5196016,
+						"collisionPoly": {
+							"points": [
+								0.29,
+								0.129,
+								0.7766666666666666,
+								0.1705,
+								0.9406666666666667,
+								0.299,
+								0.9273333333333333,
+								0.838,
+								0.679,
+								0.838,
+								0.146,
+								0.832,
+								0.19133333333333333,
+								0.241
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 491539299256349,
+				"name": "Knight3",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 3000,
+						"height": 2000,
+						"originX": 0.5116666666666667,
+						"originY": 0.84,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6999562,
+						"collisionPoly": {
+							"points": [
+								0.71,
+								0.071,
+								0.825,
+								0.0875,
+								0.9253333333333333,
+								0.458,
+								0.917,
+								0.839,
+								0.186,
+								0.8535,
+								0.146,
+								0.832,
+								0.19133333333333333,
+								0.241,
+								0.29,
+								0.129
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 3000,
+						"height": 2000,
+						"originX": 0.5116666666666667,
+						"originY": 0.84,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1680770,
+						"collisionPoly": {
+							"points": [
+								0.7113333333333334,
+								0.071,
+								0.8263333333333334,
+								0.0875,
+								0.9406666666666667,
+								0.299,
+								0.9183333333333333,
+								0.839,
+								0.19066666666666668,
+								0.8455,
+								0.146,
+								0.832,
+								0.19133333333333333,
+								0.241,
+								0.29,
+								0.129
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 3000,
+						"height": 2000,
+						"originX": 0.5116666666666667,
+						"originY": 0.84,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8810530,
+						"collisionPoly": {
+							"points": [
+								0.7126666666666667,
+								0.073,
+								0.8276666666666667,
+								0.0895,
+								0.9406666666666667,
+								0.299,
+								0.9196666666666666,
+								0.841,
+								0.20066666666666666,
+								0.8555,
+								0.146,
+								0.832,
+								0.19133333333333333,
+								0.241,
+								0.29,
+								0.129
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 490783762169537,
+				"name": "Merchant3",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 3000,
+						"height": 2000,
+						"originX": 0.5116666666666667,
+						"originY": 0.84,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 405237,
+						"collisionPoly": {
+							"points": [
+								0.29,
+								0.129,
+								0.7766666666666666,
+								0.1705,
+								0.9406666666666667,
+								0.299,
+								0.9273333333333333,
+								0.838,
+								0.679,
+								0.838,
+								0.146,
+								0.832,
+								0.19133333333333333,
+								0.241
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 749450361999311,
+				"name": "Default-Knight3",
 				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
