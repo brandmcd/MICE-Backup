@@ -66,10 +66,7 @@
 					"actions": [
 						{
 							"callFunction": "EnterLayout",
-							"sid": 903308581349830,
-							"parameters": [
-								"\"2. Choice1\""
-							]
+							"sid": 903308581349830
 						}
 					],
 					"sid": 422320660086507

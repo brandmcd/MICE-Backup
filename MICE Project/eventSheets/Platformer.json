@@ -385,16 +385,13 @@
 			],
 			"actions": [
 				{
-					"callFunction": "EnterLayout",
-					"sid": 163664530225250,
-					"parameters": [
-						"\"\""
-					]
-				},
-				{
 					"id": "stop-all",
 					"objectClass": "Music",
-					"sid": 409413996287079
+					"sid": 888015551301434
+				},
+				{
+					"callFunction": "EnterLayout",
+					"sid": 163664530225250
 				}
 			],
 			"sid": 102950821756605

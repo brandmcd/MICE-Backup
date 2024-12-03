@@ -6,7 +6,7 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 284314158887224,
+			"sid": 212320687138455,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -40,7 +40,7 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 980030789501306,
+			"sid": 652419687403482,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -83,13 +83,13 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 19,
-					"sid": 674070367141047,
+					"uid": 37,
+					"sid": 628627084883812,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 674070367141047,
+						"sid": 628627084883812,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -115,7 +115,7 @@
 					}
 				}
 			],
-			"sid": 994241129020861,
+			"sid": 417572525382223,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -162,13 +162,13 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 14,
-							"sid": 484472387043130,
+							"uid": 70,
+							"sid": 901672810176906,
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 484472387043130,
+								"sid": 901672810176906,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -202,13 +202,13 @@
 								"enable-collisions": true,
 								"live-preview": false
 							},
-							"uid": 15,
-							"sid": 798988947873587,
+							"uid": 71,
+							"sid": 951384655704932,
 							"tags": "",
 							"instanceVariables": {},
 							"behaviors": {},
 							"instanceFolderItem": {
-								"sid": 798988947873587,
+								"sid": 951384655704932,
 								"expanded": true,
 								"folderName": "",
 								"indexInFolder": -1,
@@ -234,7 +234,7 @@
 							}
 						}
 					],
-					"sid": 379396261191736,
+					"sid": 257431777973083,
 					"effectTypes": [],
 					"isInitiallyVisible": true,
 					"isInitiallyInteractive": true,
@@ -270,7 +270,7 @@
 					"properties": {
 						"text": "Char Name",
 						"enable-bbcode": true,
-						"font": "Bernard MT",
+						"font": "Arial",
 						"size": 32,
 						"line-height": 0,
 						"bold": false,
@@ -282,7 +282,7 @@
 							1
 						],
 						"horizontal-alignment": "left",
-						"vertical-alignment": "center",
+						"vertical-alignment": "top",
 						"wrapping": "word",
 						"text-direction": "ltr",
 						"icon-set": -1,
@@ -290,13 +290,13 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 12,
-					"sid": 790991887534964,
+					"uid": 38,
+					"sid": 772469177675496,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 790991887534964,
+						"sid": 772469177675496,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -326,7 +326,7 @@
 					"properties": {
 						"text": "Dialogue Text",
 						"enable-bbcode": true,
-						"font": "Franklin Gothic",
+						"font": "cursive",
 						"size": 30,
 						"line-height": 0,
 						"bold": false,
@@ -346,13 +346,13 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 11,
-					"sid": 158444057512326,
+					"uid": 65,
+					"sid": 305751258025239,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 158444057512326,
+						"sid": 305751258025239,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -386,13 +386,13 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 20,
-					"sid": 885485178823422,
+					"uid": 66,
+					"sid": 179284791358274,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 885485178823422,
+						"sid": 179284791358274,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -426,13 +426,13 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 21,
-					"sid": 324461313444024,
+					"uid": 67,
+					"sid": 304951674834938,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 324461313444024,
+						"sid": 304951674834938,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -466,13 +466,13 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 22,
-					"sid": 870822780196202,
+					"uid": 68,
+					"sid": 481112775819540,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 870822780196202,
+						"sid": 481112775819540,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -481,8 +481,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 1194.8710595572122,
-						"y": 388.7448631990138,
+						"x": 1208,
+						"y": 391,
 						"width": 32,
 						"height": 32,
 						"originX": 0,
@@ -502,7 +502,7 @@
 					"properties": {
 						"text": "Text",
 						"enable-bbcode": true,
-						"font": "Franklin Gothic",
+						"font": "Arial",
 						"size": 12,
 						"line-height": 0,
 						"bold": false,
@@ -522,15 +522,15 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 23,
-					"sid": 785297489460306,
+					"uid": 69,
+					"sid": 310540147655766,
 					"tags": "",
 					"instanceVariables": {
 						"AnswerID": 0
 					},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 785297489460306,
+						"sid": 310540147655766,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -556,7 +556,7 @@
 					}
 				}
 			],
-			"sid": 523025383954236,
+			"sid": 506223412834101,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -590,7 +590,7 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 888973474086401,
+			"sid": 839902938356089,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -624,7 +624,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 164793320068946,
+	"sid": 912348657098685,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 1600,

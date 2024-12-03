@@ -15,24 +15,16 @@
 					"functionReturnType": "none",
 					"functionCopyPicked": false,
 					"functionIsAsync": false,
-					"functionParameters": [
-						{
-							"name": "gotoLayout",
-							"type": "string",
-							"initialValue": "",
-							"comment": "",
-							"sid": 501572656022056
-						}
-					],
+					"functionParameters": [],
 					"eventType": "function-block",
 					"conditions": [],
 					"actions": [
 						{
-							"id": "go-to-layout-by-name",
+							"id": "go-to-nextprevious-layout",
 							"objectClass": "System",
-							"sid": 197906088707856,
+							"sid": 758959040472284,
 							"parameters": {
-								"layout": "gotoLayout"
+								"which": "next"
 							}
 						}
 					],

@@ -123,6 +123,15 @@
 								"variable": "GameState",
 								"value": "\"Dialogue\""
 							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 855881287681708,
+							"parameters": {
+								"variable": "curScene",
+								"value": "0"
+							}
 						}
 					],
 					"sid": 866968798133568
@@ -661,7 +670,8 @@
 						}
 					]
 				}
-			]
+			],
+			"isOrBlock": true
 		},
 		{
 			"eventType": "group",
@@ -902,6 +912,15 @@
 							"sid": 636376905838136,
 							"parameters": {
 								"text": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".char\")"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Characters",
+							"sid": 193025407145518,
+							"parameters": {
+								"animation": "JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".char\") & JSONDialogue.Get(\"setnumber\")",
+								"from": "beginning"
 							}
 						},
 						{
@@ -1225,10 +1244,7 @@
 						},
 						{
 							"callFunction": "EnterLayout",
-							"sid": 361801469902235,
-							"parameters": [
-								"Functions.format(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".nextscene\"))"
-							]
+							"sid": 361801469902235
 						},
 						{
 							"id": "set-eventvar-value",
