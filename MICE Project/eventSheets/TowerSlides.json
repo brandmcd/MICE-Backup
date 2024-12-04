@@ -1,0 +1,95 @@
+{
+	"name": "TowerSlides",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "LayoutManager"
+		},
+		{
+			"eventType": "variable",
+			"name": "slideCount2",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "The number of the slide (also anim name)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 772051740631278
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 281775022304666
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 584797613353482,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 452382108504791,
+					"parameters": {
+						"key": 13
+					}
+				}
+			],
+			"actions": [],
+			"sid": 475106829155318,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 383429534465734,
+							"parameters": {
+								"first-value": "TowerSlides.AnimationName",
+								"comparison": 1,
+								"second-value": "str(slideCount2)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "TowerSlides",
+							"sid": 673186032228587,
+							"parameters": {
+								"animation": "str(int(TowerSlides.AnimationName) + 1)",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 353084970011398
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 175075722444921
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "do nothing, end of game"
+						}
+					],
+					"sid": 760657242371834
+				}
+			],
+			"isOrBlock": true
+		}
+	],
+	"sid": 118911560405009
+}

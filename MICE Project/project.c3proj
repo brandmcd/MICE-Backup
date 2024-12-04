@@ -125,7 +125,9 @@
 			"Sprite3",
 			"WARNING",
 			"Music",
-			"heart"
+			"heart",
+			"cave",
+			"tower"
 		],
 		"subfolders": [
 			{
@@ -197,7 +199,9 @@
 			},
 			{
 				"items": [
-					"BeginSlides"
+					"BeginSlides",
+					"TowerSlides",
+					"CaveSlides"
 				],
 				"subfolders": [],
 				"name": "StorySlides"
@@ -216,14 +220,18 @@
 					"Sprite10",
 					"Sprite11",
 					"Sprite12",
-					"Sprite13"
+					"Sprite13",
+					"Sprite14",
+					"Sprite15",
+					"Sprite16",
+					"Sprite17"
 				],
 				"subfolders": [],
 				"name": "Platforms"
 			},
 			{
 				"items": [
-					"Sprite14"
+					"TowerBackground"
 				],
 				"subfolders": [],
 				"name": "Tower"
@@ -260,7 +268,9 @@
 			"ArmorManager",
 			"TempTowerManager",
 			"BeginStorySlides",
-			"MusicManager"
+			"MusicManager",
+			"TowerSlides",
+			"CaveSlides"
 		],
 		"subfolders": []
 	},

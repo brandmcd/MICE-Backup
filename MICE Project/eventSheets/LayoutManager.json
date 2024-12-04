@@ -29,6 +29,36 @@
 						}
 					],
 					"sid": 534021318872996
+				},
+				{
+					"functionName": "EnterLayout2",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "string",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 320284939000493
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 113530825561645,
+							"parameters": {
+								"layout": "string"
+							}
+						}
+					],
+					"sid": 743860261458442
 				}
 			],
 			"sid": 375853161123478

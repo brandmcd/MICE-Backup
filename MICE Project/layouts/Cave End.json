@@ -7,37 +7,21 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "RandomAssPlaceholder",
+					"type": "CaveSlides",
 					"properties": {
-						"text": "Ok so this is where the armored end will go. You can't climb the tower and then you fall in a cave and beat a dragons butt and then you are like a hero in the town but your sad cuz nobody gets you. There will be art to prove this.",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 46,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
 						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
+						"initial-animation": "1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
 					},
 					"uid": 39,
-					"sid": 519333627184683,
+					"sid": 586009986316348,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"instanceFolderItem": {
-						"sid": 519333627184683,
+						"sid": 586009986316348,
 						"expanded": true,
 						"folderName": "",
 						"indexInFolder": -1,
@@ -46,68 +30,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 101,
-						"y": 64,
-						"width": 1270,
-						"height": 498,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "RandomAssPlaceholder",
-					"properties": {
-						"text": "There isn't a way out of this screen rn just close your browser and hope for the best",
-						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 46,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0,
-							0,
-							0,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"text-direction": "ltr",
-						"icon-set": -1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 40,
-					"sid": 703471256202449,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 703471256202449,
-						"expanded": true,
-						"folderName": "",
-						"indexInFolder": -1,
-						"folderNestingLevel": -1
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 69,
-						"y": 569,
-						"width": 1421,
-						"height": 363,
-						"originX": 0,
-						"originY": 0,
+						"x": 800,
+						"y": 450,
+						"width": 1600,
+						"height": 900,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -156,11 +84,11 @@
 	"sid": 593380556113956,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 3200,
-	"height": 1800,
+	"width": 1600,
+	"height": 900,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
 	"projection": "perspective",
-	"eventSheet": null
+	"eventSheet": "CaveSlides"
 }

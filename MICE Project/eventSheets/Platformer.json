@@ -512,6 +512,82 @@
 				}
 			],
 			"sid": 102950821756605
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tower Ending Stuff",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerBox",
+							"sid": 857707115380866,
+							"parameters": {
+								"object": "cave"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 249619381939718,
+							"parameters": {
+								"variable": "ArmorLevel",
+								"comparison": 1,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "EnterLayout2",
+							"sid": 781820060722120,
+							"parameters": [
+								"\"Cave End\""
+							]
+						}
+					],
+					"sid": 593948750521221
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "PlayerBox",
+							"sid": 539168645801579,
+							"parameters": {
+								"object": "tower"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 987999839125826,
+							"parameters": {
+								"variable": "ArmorLevel",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "EnterLayout2",
+							"sid": 641797590297185,
+							"parameters": [
+								"\"Tower End\""
+							]
+						}
+					],
+					"sid": 454844784295042
+				}
+			],
+			"sid": 866907924217975
 		}
 	],
 	"sid": 197420161874541

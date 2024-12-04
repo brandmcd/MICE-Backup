@@ -1,0 +1,95 @@
+{
+	"name": "CaveSlides",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "LayoutManager"
+		},
+		{
+			"eventType": "variable",
+			"name": "slideCount3",
+			"type": "number",
+			"initialValue": "6",
+			"comment": "The number of the slide (also anim name)",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 755587449952962
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-touch-end",
+					"objectClass": "Touch",
+					"sid": 107086425078010
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 177965806333280,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 179038381637037,
+					"parameters": {
+						"key": 13
+					}
+				}
+			],
+			"actions": [],
+			"sid": 636986297720091,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 514529415132050,
+							"parameters": {
+								"first-value": "CaveSlides.AnimationName",
+								"comparison": 1,
+								"second-value": "str(slideCount3)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "CaveSlides",
+							"sid": 964671659731040,
+							"parameters": {
+								"animation": "str(int(CaveSlides.AnimationName) + 1)",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 188105662067172
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 916840153626697
+						}
+					],
+					"actions": [
+						{
+							"type": "comment",
+							"text": "do nothing, end of game"
+						}
+					],
+					"sid": 770298294912804
+				}
+			],
+			"isOrBlock": true
+		}
+	],
+	"sid": 956053403580115
+}

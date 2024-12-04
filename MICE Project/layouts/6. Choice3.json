@@ -41,7 +41,7 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Sprite14",
+					"type": "TowerBackground",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Animation 1",
@@ -64,16 +64,16 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 530,
-						"y": 117,
-						"width": 250,
-						"height": 250,
+						"x": 816,
+						"y": 183,
+						"width": 2560,
+						"height": 1440,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
-							1,
-							1,
-							1,
+							0.4627450980392157,
+							0.49411764705882355,
+							0.6352941176470588,
 							1
 						],
 						"angle": 0,
