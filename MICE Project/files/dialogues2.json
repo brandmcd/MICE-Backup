@@ -86,9 +86,9 @@
 					"line": "So, you chose to don the armor. My companion hoped you’d lean more upon us, but the choice is yours to make."
 				},
 				{
-					"char": "Merchant",
-					"type": "line",
-					"line": "Bah! Trust may soothe the heart, but steel shields the flesh."
+   					"char": "Merchant",
+    				"type": "line",
+   					"line": "Bah! Trust may comfort the soul, but steel keeps you breathing. And judging by your wounds, you need a lot more of it!"
 				},
 				{
 					"char": "Knight",

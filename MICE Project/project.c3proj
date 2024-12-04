@@ -215,10 +215,18 @@
 					"Sprite9",
 					"Sprite10",
 					"Sprite11",
-					"Sprite12"
+					"Sprite12",
+					"Sprite13"
 				],
 				"subfolders": [],
 				"name": "Platforms"
+			},
+			{
+				"items": [
+					"Sprite14"
+				],
+				"subfolders": [],
+				"name": "Tower"
 			}
 		]
 	},
