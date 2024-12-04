@@ -124,7 +124,8 @@
 			"RandomAssPlaceholder",
 			"Sprite3",
 			"WARNING",
-			"Music"
+			"Music",
+			"heart"
 		],
 		"subfolders": [
 			{
@@ -181,7 +182,7 @@
 			},
 			{
 				"items": [
-					"Sprite2"
+					"Village"
 				],
 				"subfolders": [],
 				"name": "Village"
@@ -203,10 +204,21 @@
 			},
 			{
 				"items": [
-					"Village"
+					"Block",
+					"Solid",
+					"Sprite2",
+					"Sprite6",
+					"Sprite5",
+					"Sprite4",
+					"Sprite7",
+					"Sprite8",
+					"Sprite9",
+					"Sprite10",
+					"Sprite11",
+					"Sprite12"
 				],
 				"subfolders": [],
-				"name": "Backgrounds"
+				"name": "Platforms"
 			}
 		]
 	},

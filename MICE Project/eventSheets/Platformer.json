@@ -50,6 +50,30 @@
 					"parameters": {
 						"jump-strength": "DefaultJump + (ArmorLevel * JumpMultPerArmor)"
 					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "MainPlayer",
+					"sid": 403619841055653,
+					"parameters": {
+						"color": "rgbEx(255,255,255)"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 249030398293250,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "MainPlayer",
+					"sid": 727425944322708,
+					"parameters": {
+						"color": "rgbEx(100, 100, 100)"
+					}
 				}
 			],
 			"sid": 876159206562494
@@ -71,6 +95,15 @@
 					"parameters": {
 						"object": "PlayerBox",
 						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "heart",
+					"sid": 351747295352144,
+					"parameters": {
+						"animation": "str(Health)",
+						"from": "beginning"
 					}
 				}
 			],
@@ -322,7 +355,7 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 467407315594185,
+					"sid": 298430327917969,
 					"parameters": {
 						"seconds": "0.5"
 					}
@@ -341,9 +374,9 @@
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "MainPlayer",
-					"sid": 582572402444503,
+					"sid": 912829487883816,
 					"parameters": {
-						"object": "HURT"
+						"object": "Sprite5"
 					}
 				}
 			],
@@ -351,25 +384,109 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 437595701663343,
+					"sid": 934191229088205,
 					"parameters": {
 						"variable": "Health",
 						"value": "Health - 1"
 					}
 				},
 				{
+					"id": "set-default-color",
+					"objectClass": "MainPlayer",
+					"sid": 705642895887518,
+					"parameters": {
+						"color": "rgbEx(100, 0, 0)"
+					}
+				},
+				{
 					"id": "flash",
 					"objectClass": "MainPlayer",
-					"sid": 312783224984345,
+					"sid": 391988535601723,
 					"behaviorType": "Flash",
 					"parameters": {
 						"on-time": "0.1",
 						"off-time": "0.1",
 						"duration": "0.5"
 					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 501351120798019,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "MainPlayer",
+					"sid": 680565219250259,
+					"parameters": {
+						"color": "rgbEx(100, 100, 100)"
+					}
 				}
 			],
 			"sid": 460914547532598
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "MainPlayer",
+					"sid": 594587403466832,
+					"parameters": {
+						"object": "Sprite6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 734593319724280,
+					"parameters": {
+						"variable": "Health",
+						"value": "Health - 1"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "MainPlayer",
+					"sid": 986269833979555,
+					"parameters": {
+						"color": "rgbEx(100, 0, 0)"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "MainPlayer",
+					"sid": 314349710233045,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "0.5"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 837077489582897,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "MainPlayer",
+					"sid": 213194359852945,
+					"parameters": {
+						"color": "rgbEx(100, 100, 100)"
+					}
+				}
+			],
+			"sid": 331443329052413
 		},
 		{
 			"eventType": "block",

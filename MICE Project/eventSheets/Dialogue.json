@@ -444,6 +444,22 @@
 					"id": "on-any-touch-end",
 					"objectClass": "Touch",
 					"sid": 458876823372653
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 939629648044603,
+					"parameters": {
+						"key": 13
+					}
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 286529237657709,
+					"parameters": {
+						"key": 32
+					}
 				}
 			],
 			"actions": [],
