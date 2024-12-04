@@ -118,7 +118,6 @@
 			"Keyboard",
 			"MainPlayer",
 			"PlayerBox",
-			"idkwhatthisis",
 			"ArmorPopUp",
 			"NewZone",
 			"Sprite",
@@ -156,7 +155,8 @@
 					"Continue",
 					"SelectAns",
 					"AnswerBox",
-					"Text_Answer"
+					"Text_Answer",
+					"CharBox"
 				],
 				"subfolders": [
 					{
@@ -200,6 +200,13 @@
 				],
 				"subfolders": [],
 				"name": "StorySlides"
+			},
+			{
+				"items": [
+					"Village"
+				],
+				"subfolders": [],
+				"name": "Backgrounds"
 			}
 		]
 	},

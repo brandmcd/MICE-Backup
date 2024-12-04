@@ -39,7 +39,48 @@
 			"name": "Background",
 			"overriden": 0,
 			"subLayers": [],
-			"instances": [],
+			"instances": [
+				{
+					"type": "Village",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"sid": 772951558460189,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 772951558460189,
+						"expanded": true,
+						"folderName": "",
+						"indexInFolder": -1,
+						"folderNestingLevel": -1
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 4416,
+						"y": -1151,
+						"width": 8876,
+						"height": 4122,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
 			"sid": 652419687403482,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
@@ -98,8 +139,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 712,
-						"y": 899,
+						"x": 703,
+						"y": 907,
 						"width": 1479.0845070422538,
 						"height": 1019.9999999999998,
 						"originX": 0.5116666666666667,
@@ -194,7 +235,7 @@
 							}
 						},
 						{
-							"type": "idkwhatthisis",
+							"type": "CharBox",
 							"properties": {
 								"initially-visible": true,
 								"initial-animation": "Animation 1",
@@ -218,7 +259,7 @@
 							"locked": false,
 							"world": {
 								"x": 340,
-								"y": 635,
+								"y": 632,
 								"width": 466,
 								"height": 84,
 								"originX": 0.5,
@@ -270,19 +311,19 @@
 					"properties": {
 						"text": "Char Name",
 						"enable-bbcode": true,
-						"font": "Arial",
-						"size": 32,
+						"font": "Lucida Fax",
+						"size": 40,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
+							0.8392156862745098,
+							0.7019607843137254,
 							0,
 							1
 						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
 						"wrapping": "word",
 						"text-direction": "ltr",
 						"icon-set": -1,
@@ -305,8 +346,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 107,
-						"y": 594,
+						"x": 107.5031906109711,
+						"y": 590.477761696998,
 						"width": 466,
 						"height": 81,
 						"originX": 0,
@@ -326,15 +367,15 @@
 					"properties": {
 						"text": "Dialogue Text",
 						"enable-bbcode": true,
-						"font": "cursive",
+						"font": "Lucida Fax",
 						"size": 30,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -361,8 +402,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 109,
-						"y": 679,
+						"x": 116,
+						"y": 678,
 						"width": 1129,
 						"height": 213,
 						"originX": 0,
@@ -403,7 +444,7 @@
 					"world": {
 						"x": 1196,
 						"y": 341,
-						"width": 274,
+						"width": 358,
 						"height": 160,
 						"originX": 0,
 						"originY": 0,
@@ -502,15 +543,15 @@
 					"properties": {
 						"text": "Text",
 						"enable-bbcode": true,
-						"font": "Arial",
+						"font": "Lucida Fax",
 						"size": 12,
 						"line-height": 0,
 						"bold": false,
 						"italic": false,
 						"color": [
-							0,
-							0,
-							0,
+							1,
+							1,
+							1,
 							1
 						],
 						"horizontal-alignment": "left",

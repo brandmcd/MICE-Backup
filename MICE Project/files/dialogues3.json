@@ -42,7 +42,12 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Smart choice. This armor will keep you safe."
+					"line": "Smart choice. This armor will keep you safe. Now go forth and slay the wicked dragon."
+				},
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Your story will be one of glory and triumph and I hope you spread the word of all I have done for you."
 				},
 				{
 					"char": "Merchant",
@@ -52,7 +57,7 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "I hope it serves you well, though I wish you’d chosen connection over defense."
+					"line": "I hope the armor serves you well, though I wish you’d chosen connection over defense."
 				},
 				{
 					"type": "end"
@@ -65,12 +70,12 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "Good choice. The tower will show you the strength of trust and unity."
+					"line": "Good choice. Climb the tower and us knights will show you the strength of trust and unity."
 				},
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Bah! Trust won’t save you from a dragon’s wrath. But good luck, I suppose."
+					"line": "Bah! Trust won’t save the town from a dragon’s wrath when the time comes. But good luck, I suppose."
 				},
 				{
 					"type": "end"
@@ -88,7 +93,7 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "The tower above still calls to you. To climb, you’ll need to shed your defenses and trust in others."
+					"line": "I hope the tower above still calls to you. To climb, you’ll need to shed your defenses and trust in us knights as we await at the top."
 				},
 				{
 					"char": "Merchant",
@@ -113,7 +118,7 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Excellent choice. The dragon will be no match for you now."
+					"line": "Excellent choice. The dragon will be no match for you now!"
 				},
 				{
 					"char": "Merchant",
@@ -156,6 +161,16 @@
 		{
 			"id": 6,
 			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Finally, you have made it through the forest! Now you must take on the fierce dragon in the cave below."
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "That is certainly an option but us knights are still hoping that you will be willing to shed your armor and climb the tower to join us."
+				},
 				{
 					"char": "Merchant",
 					"type": "line",
@@ -209,7 +224,12 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "You’ve made the right choice. Connection is worth more than defense."
+					"line": "You’ve made the right choice. Connection is worth more than defense!"
+				},
+				{
+					"char": "Knight",
+					"type": "function",
+					"function": "DecreaseArmor"
 				},
 				{
 					"char": "Knight",

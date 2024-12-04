@@ -7,31 +7,31 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "Ah, a traveler! My friend, the other knight, told me about you. I see you’ve chosen to walk without armor. They’re quite proud of you!"
+					"line": "Ah, a traveler! My companion, the other knight, spoke of you. I see you’ve chosen to journey without armor. They hold great respect for your resolve."
 				},
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "It’s not an easy path, but it shows you trust in your allies and your own agility."
+					"line": "It is no easy path, yet it speaks of your faith in both your allies and your own swiftness."
 				},
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Hmph. Trust and agility won’t stop an arrow from finding its mark. You’ll need every bit of wit and luck in this forest."
+					"line": "Hmph. Faith and agility won’t stop an arrow from finding its mark. You’ll need wit and fortune to survive this forest."
 				},
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "Don’t let his words scare you. You’ve chosen wisely. Together, we’ll navigate these dangers as a team."
+					"line": "Pay no heed to his warnings. Your choice is a noble one. Together, we shall face the perils ahead with unity and strength."
 				},
 				{
 					"char": "Merchant",
 					"type": "question",
-					"question": "But before you go, one last offer: Will you reconsider and take some armor to shield yourself?",
+					"question": "Before you proceed, one final offer...\nWill you reconsider and take some armor for protection?",
 					"nbanswers": 2,
-					"answer0": "I’ll take the armor. Maybe some protection is worth it.",
+					"answer0": "I’ll take the armor. Some protection might be helpful.",
 					"nextscene0": 1,
-					"answer1": "I’ll go without. My allies are all the protection I need.",
+					"answer1": "I’ll go without. My allies are protection enough.",
 					"nextscene1": 2
 				}
 			]
@@ -42,7 +42,7 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "A wise choice. At least now you’ll have some protection in this perilous forest."
+					"line": "A wise decision. At least now you’ll have some defense in the treacherous forest ahead."
 				},
 				{
 					"char": "Merchant",
@@ -52,7 +52,7 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "If that’s what you believe is best, I respect your decision. But remember, we’re here to help—don’t let the armor keep us too far away."
+					"line": "If this is the course you deem best, I honor your judgment. However, remember that no armor can replace the bonds we share."
 				},
 				{
 					"type": "end"
@@ -65,12 +65,12 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "Excellent! You’ve chosen trust over barriers. My friend will be thrilled, and we’ll stand strong together."
+					"line": "A fine choice! You place trust above steel, my companion will be proud. We stand as one."
 				},
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Hmph. Suit yourself. Just remember—there’s no undoing a fatal wound."
+					"line": "Hmph. Very well. Just remember that fate offers no pity to the careless."
 				},
 				{
 					"type": "end"
@@ -83,28 +83,28 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "So, you chose to take the armor. My friend was hoping you’d rely more on your allies. They trust you, you know."
+					"line": "So, you chose to don the armor. My companion hoped you’d lean more upon us, but the choice is yours to make."
 				},
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Bah! Trust is no substitute for steel when blades are drawn."
+					"line": "Bah! Trust may soothe the heart, but steel shields the flesh."
 				},
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "Are you sure that armor is what you need? Sometimes protection can weigh you down more than the danger you face."
+					"line": "Are you certain this is the protection you seek? Remember, weight can hinder as much as it guards."
 				},
 				{
 					"char": "Merchant",
 					"type": "question",
-					"question": "What will you do now? Keep what you have, add more, or shed some to trust your allies?",
+					"question": "What will you do now? Keep what you have, add more, or set some aside in favor of trust?",
 					"nbanswers": 3,
-					"answer0": "I’ll buy more armor. Better safe than sorry.",
+					"answer0": "I’ll buy more armor. Better to be cautious.",
 					"nextscene0": 4,
-					"answer1": "I’ll shed some armor. My allies are all the protection I need.",
+					"answer1": "I’ll shed some armor. Trust in my allies is enough.",
 					"nextscene1": 5,
-					"answer2": "I’ll keep what I have. It’s a balanced choice.",
+					"answer2": "I’ll keep what I have. A balanced choice feels right.",
 					"nextscene2": 6
 				}
 			]
@@ -125,12 +125,7 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "If that’s what you think is best, so be it. But remember, there’s more to strength than steel."
-				},
-				{
-					"char": "Knight",
-					"type": "line",
-					"line": "I hope you’ll still let us in, friend."
+					"line": "If this is what your heart tells you, I shall not dissuade you. But remember... true strength lies in the spirit, not just the steel."
 				},
 				{
 					"type": "end"
@@ -143,12 +138,12 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "Ah, you’ve decided to shed some armor. My friend will be pleased!"
+					"line": "Ah, you’ve chosen to lighten your burden. My companion will be glad to hear it!"
 				},
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "We’ll face any danger together, as comrades."
+					"line": "Together, we will face any challenge as steadfast comrades."
 				},
 				{
 					"char": "Merchant",
@@ -158,7 +153,7 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Hmph. That’s your choice, I suppose. Just don’t blame me if you regret it."
+					"line": "Hmph. So be it. Just don’t look to me when regret catches up."
 				},
 				{
 					"type": "end"
@@ -171,17 +166,17 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Keeping what you have? A balanced choice, I suppose."
+					"line": "Keeping what you have? A fair decision, I suppose."
 				},
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Just remember to stay vigilant."
+					"line": "Just be sure to remain watchful."
 				},
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "That’s fair. Stay steady, friend. We’re with you, armor or not."
+					"line": "A measured choice. Stay vigilant, friend. With or without armor, we stand united."
 				},
 				{
 					"type": "end"

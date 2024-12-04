@@ -962,9 +962,9 @@
 						{
 							"id": "set-size",
 							"objectClass": "AnswerBox",
-							"sid": 175903905866802,
+							"sid": 278880127309266,
 							"parameters": {
-								"width": "320",
+								"width": "400",
 								"height": "(4*(JSONDialogue.Get(\"scene.\" & sceneID & \".dialogs.\" & dialogueID & \".nbanswers\")))*32"
 							}
 						}
