@@ -59,9 +59,9 @@
 					"type": "question",
 					"question": "So, what will you do? Will you accept the armor for protection and endure its \"weight\", or foolishly trust in your openness with others and expose yourself vulnerability?",
 					"nbanswers": 2,
-					"answer0": "I’ll take the armor. Safety is worth it.",
+					"answer0": "I’ll take the armor for the added protection, even at the cost of agility.",
 					"nextscene0": 1,
-					"answer1": "I’ll go without. My strength lies in my trust in others.",
+					"answer1": "I’ll go without the protection and in trust in others.",
 					"nextscene1": 2
 				}
 			]

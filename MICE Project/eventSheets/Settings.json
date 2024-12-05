@@ -1,0 +1,224 @@
+{
+	"name": "Settings",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "doType",
+			"type": "boolean",
+			"initialValue": "true",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 298481136141106
+		},
+		{
+			"eventType": "variable",
+			"name": "typeSpeed",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 213468694980545
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 647597038483468,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "checkbox"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 103936245598581,
+					"parameters": {
+						"variable": "doType"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "checkbox",
+					"sid": 969890109654227,
+					"parameters": {
+						"animation": "\"false\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 109698997997021
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 286663118969821,
+					"parameters": {
+						"variable": "doType",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "doTypewriter",
+					"sid": 740826034140128,
+					"parameters": {
+						"text": "\"Typewriter text is DISABLED \""
+					}
+				}
+			],
+			"sid": 103415017883852
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 968501730490337,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "checkbox"
+					}
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 792921932042981,
+					"parameters": {
+						"variable": "doType"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "checkbox",
+					"sid": 163964978238996,
+					"parameters": {
+						"animation": "\"true\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait-for-previous-actions",
+					"objectClass": "System",
+					"sid": 393987440357350
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 649657294579495,
+					"parameters": {
+						"variable": "doType",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "doTypewriter",
+					"sid": 357792426632009,
+					"parameters": {
+						"text": "\"Typewriter text is ENABLED \""
+					}
+				}
+			],
+			"sid": 659359260653887
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 925961081043526
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 683718363576251,
+					"parameters": {
+						"variable": "doType"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 698208704094912,
+					"parameters": {
+						"variable": "typeSpeed",
+						"value": "32"
+					}
+				}
+			],
+			"sid": 160430142690065
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 369732680313297
+				},
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 254790346170472,
+					"parameters": {
+						"variable": "doType"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 370560712961291,
+					"parameters": {
+						"variable": "typeSpeed",
+						"value": "10000"
+					}
+				}
+			],
+			"sid": 475358002362015
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 300506786693731,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "start"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "EnterLayout",
+					"sid": 451850988049892
+				}
+			],
+			"sid": 705603335435862
+		}
+	],
+	"sid": 859475651483842
+}

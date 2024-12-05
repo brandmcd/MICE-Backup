@@ -104,11 +104,13 @@
 					"char": "Knight",
 					"type": "question",
 					"question": "Will you take more armor for the dragon or shed your armor to climb the tower?",
-					"nbanswers": 2,
+					"nbanswers": 3,
 					"answer0": "I’ll take more armor. I need all the protection I can get.",
 					"nextscene0": 4,
 					"answer1": "I’ll shed this armor. I’m ready to climb the tower.",
-					"nextscene1": 5
+					"nextscene1": 5,
+					"answer2": "I’ll keep what I have as I take on the dragon.",
+					"nextscene2": 6
 				}
 			]
 		},
@@ -164,48 +166,6 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Finally, you have made it through the forest! Now you must take on the fierce dragon in the cave below."
-				},
-				{
-					"char": "Knight",
-					"type": "line",
-					"line": "That is certainly an option but us knights are still hoping that you will be willing to shed all of your armor and climb the tower to join us."
-				},
-				{
-					"char": "Merchant",
-					"type": "line",
-					"line": "With two layers of armor, the dragon doesn’t stand a chance. But the climb? You’ll never make it like this."
-				},
-				{
-					"char": "Knight",
-					"type": "line",
-					"line": "If you truly seek community, you must let go of the weight holding you back. Vulnerability is the only way forward."
-				},
-				{
-					"char": "Knight",
-					"type": "line",
-					"line": "You already seem wounded... I fear you won't last another step without help. Please, let us guide you."
-				},
-				{
-					"char": "Merchant",
-					"type": "question",
-					"question": "What will you do? Keep your armor, shed it for the climb, or take a third layer?",
-					"nbanswers": 3,
-					"answer0": "I’ll keep my armor. The dragon is my goal.",
-					"nextscene0": 7,
-					"answer1": "I’ll shed my armor. I want to climb the tower.",
-					"nextscene1": 8,
-					"answer2": "I’ll take more armor. I want to be unstoppable.",
-					"nextscene2": 9
-				}
-			]
-		},
-		{
-			"id": 7,
-			"dialogs": [
-				{
-					"char": "Merchant",
-					"type": "line",
 					"line": "I fail to understand why you decline further protection..." 
 				},
 				{
@@ -214,70 +174,9 @@
 					"line": "Alas, glory awaits! I pray that your current armor will carry you to victory."
 				},
 				{
-					"char": "Merchant",
-					"type": "function",
-					"function": "IncreaseArmor"
-				},
-				{
 					"char": "Knight",
 					"type": "line",
 					"line": "Be careful. Glory may not be as fulfilling as you think."
-				},
-				{
-					"type": "end"
-				}
-			]
-		},
-		{
-			"id": 8,
-			"dialogs": [
-				{
-					"char": "Knight",
-					"type": "line",
-					"line": "You’ve made the right choice. Connection is worth more than defense!"
-				},
-				{
-					"char": "Knight",
-					"type": "line",
-					"line": "Now please climb the tower and join us in celebration!"
-				},
-				{
-					"char": "Knight",
-					"type": "function",
-					"function": "DecreaseArmor"
-				},
-				{
-					"char": "Knight",
-					"type": "function",
-					"function": "DecreaseArmor"
-				},
-				{
-					"char": "Merchant",
-					"type": "line",
-					"line": "Hmph. You’ll regret this when danger strikes."
-				},
-				{
-					"type": "end"
-				}
-			]
-		},
-		{
-			"id": 9,
-			"dialogs": [
-				{
-					"char": "Merchant",
-					"type": "line",
-					"line": "With three layers of armor, nothing will harm you. The dragon doesn’t stand a chance!"
-				},
-				{
-					"char": "Merchant",
-					"type": "function",
-					"function": "IncreaseArmor"
-				},
-				{
-					"char": "Knight",
-					"type": "line",
-					"line": "But at what cost? Even victory won’t help if you lose connection with others."
 				},
 				{
 					"type": "end"

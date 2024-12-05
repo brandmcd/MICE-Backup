@@ -43,6 +43,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -127,7 +134,12 @@
 			"Music",
 			"heart",
 			"cave",
-			"tower"
+			"tower",
+			"Sprite18",
+			"checkbox",
+			"doTypewriter",
+			"start",
+			"Mouse"
 		],
 		"subfolders": [
 			{
@@ -246,6 +258,7 @@
 	},
 	"layouts": {
 		"items": [
+			"0. Settings",
 			"1. FirstScene",
 			"2. Choice1",
 			"3. Village",
@@ -270,7 +283,8 @@
 			"BeginStorySlides",
 			"MusicManager",
 			"TowerSlides",
-			"CaveSlides"
+			"CaveSlides",
+			"Settings"
 		],
 		"subfolders": []
 	},

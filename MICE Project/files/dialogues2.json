@@ -29,7 +29,7 @@
 					"type": "question",
 					"question": "Before you proceed, one final offer...\nWill you reconsider and take some armor for protection?",
 					"nbanswers": 2,
-					"answer0": "I’ll take the armor. Some protection might be helpful.",
+					"answer0": "I’ll take the armor. Some protection might be helpful, even if it reduces agility.",
 					"nextscene0": 1,
 					"answer1": "I’ll go without. My allies are protection enough.",
 					"nextscene1": 2
@@ -100,7 +100,7 @@
 					"type": "question",
 					"question": "What will you do now? Keep what you have, add more, or set some aside in favor of trust?",
 					"nbanswers": 3,
-					"answer0": "I’ll buy more armor. Better to be cautious.",
+					"answer0": "I’ll take more armor despite the cost of agility.",
 					"nextscene0": 4,
 					"answer1": "I’ll shed some armor. Trust in my allies is enough.",
 					"nextscene1": 5,

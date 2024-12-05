@@ -755,10 +755,10 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "dialogueTxt",
-							"sid": 501861607788242,
+							"sid": 842943075510077,
 							"parameters": {
 								"text": "Functions.format(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\"))",
-								"duration": "len(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\"))/32"
+								"duration": "len(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".line\"))/typeSpeed"
 							}
 						},
 						{
@@ -942,10 +942,10 @@
 						{
 							"id": "typewriter-text",
 							"objectClass": "dialogueTxt",
-							"sid": 421534572057986,
+							"sid": 377100420356276,
 							"parameters": {
 								"text": "Functions.format(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".question\")) ",
-								"duration": "len(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".question\"))/32"
+								"duration": "len(JSONDialogue.Get(\"scene.\"& sceneID & \".dialogs.\" & dialogueID &\".question\"))/typeSpeed"
 							}
 						},
 						{
