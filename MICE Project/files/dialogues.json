@@ -7,61 +7,41 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Ah, a traveler! You look like you’ve seen better days. That town back there isn’t always kind to those who walk a different path."
+					"line": "Ah, a traveler! You’ve left the old town behind, haven’t you? A place like that rarely embraces those who dare to be different."
 				},
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "They’re wary of change, but don’t let that discourage you. New beginnings often lie beyond the hardest doors."
+					"line": "They’re wary of change, but don’t let that discourage you. Sometimes, what we leave behind isn’t worth chasing after."
 				},
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Speaking of new beginnings, let me offer you something. This armor is fine-crafted, and worthy of any warrior. It will shield you from harm, brave traveler."
+					"line": "Or perhaps you should return... as a hero! This fine armor will make you unstoppable, proof of your worth to them!"
 				},
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "Hold on, friend. Is armor truly what you need? Protecting yourself may seem wise, but there’s strength in vulnerability as well."
+					"line": "Unstoppable, but isolated. True acceptance doesn’t come from walls of steel. It comes from letting others see your true self."
 				},
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Strength? Vulnerability leaves you exposed. Armor allows you to face your enemies without fear. Though, I won’t lie... it does come at a cost."
+					"line": "Without protection, you’ll be vulnerable to harm, failure, rejection. This armor can shield you from it all. Isn’t that what you need?"
 				},
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "A cost? Indeed. Heavy armor will weigh you down, limiting your agility. You’ll feel its burden with every step, and perhaps find yourself slower to act in a moment of need."
-				},
-				{
-					"char": "Merchant",
-					"type": "line",
-					"line": "True, but its protection is unmatched. Damage that would end a lesser warrior will glance off harmlessly. You’ll stand longer in battle, even if your movements are slower."
-				},
-				{
-					"char": "Knight",
-					"type": "line",
-					"line": "But walls keep out more than just harm. When you shield yourself, you distance yourself from those who would support you. To truly thrive, we must let others in."
-				},
-				{
-					"char": "Merchant",
-					"type": "line",
-					"line": "Yet who would rely on a warrior who falls easily? Protection lets you fight another day, to stand strong beside your allies."
-				},
-				{
-					"char": "Knight",
-					"type": "line",
-					"line": "But if we always hide behind armor, our allies may never know us, never truly understand our struggles. Connection requires openness, not barriers."
+					"line": "And what good is protection if you can’t move forward? That armor might protect you, but it will slow you down, keeping you from reaching new places or people."
 				},
 				{
 					"char": "Merchant",
 					"type": "question",
-					"question": "So, what will you do? Will you accept the armor for protection and endure its \"weight\", or foolishly trust in your openness with others and expose yourself vulnerability?",
+					"question": "So, traveler, what will it be? Will you take the armor and stand protected, or face the world bare, trusting in your openness to forge new bonds?",
 					"nbanswers": 2,
-					"answer0": "I’ll take the armor for the added protection, even at the cost of agility.",
+					"answer0": "I’ll take the armor for the protection it offers.",
 					"nextscene0": 1,
-					"answer1": "I’ll go without the protection and in trust in others.",
+					"answer1": "I’ll go without the armor and trust in others.",
 					"nextscene1": 2
 				}
 			]
@@ -72,7 +52,7 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "A wise choice, friend. May this armor protect you well in the trials to come. But remember... its weight is a burden you must carry."
+					"line": "A wise choice, friend. May this armor protect you well in the trials to come!"
 				},
 				{
 					"char": "Merchant",

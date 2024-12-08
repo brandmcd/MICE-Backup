@@ -7,7 +7,7 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "You’ve made it far without armor, and somehow in one piece. Ahead lies a dragon in its cave, guarding riches and glory."
+					"line": "You’ve made it far without armor, and somehow in one piece. Ahead lies a slumbering dragon in its cave, guarding riches and glory."
 				},
 				{
 					"char": "Knight",
@@ -29,9 +29,9 @@
 					"type": "question",
 					"question": "Will you take armor for the dragon or climb the tower without it?",
 					"nbanswers": 2,
-					"answer0": "I’ll take the armor. I need protection for the cave.",
+					"answer0": "I’ll take the armor, slay the dragon, and claim its treasure.",
 					"nextscene0": 1,
-					"answer1": "I’ll climb the tower. No armor is needed there.",
+					"answer1": "I’ll climb the tower and trust in the knights above.",
 					"nextscene1": 2
 				}
 			]
@@ -42,17 +42,17 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Smart choice. This armor will keep you safe. Now go forth and slay the wicked dragon."
-				},
-				{
-					"char": "Merchant",
-					"type": "line",
-					"line": "Your story will be one of glory and triumph!"
+					"line": "Smart choice. This armor will keep you safe. Now go forth and slay the dragon to claim its riches!"
 				},
 				{
 					"char": "Merchant",
 					"type": "function",
 					"function": "IncreaseArmor"
+				},
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Your story will be one of glory and triumph! You’ll be a hero to all and be accepted once again!"
 				},
 				{
 					"char": "Knight",
@@ -70,12 +70,12 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "Good choice. Climb the tower and us knights will show you the strength of trust and unity."
+					"line": "Thank you for your continued trust! Please climb the tower and us knights will show you the strength of trust and unity!"
 				},
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Bah! Trust won’t save the town from a dragon’s wrath when the time comes. But good luck, I suppose."
+					"line": "Bah! Trust won’t make you a true hero, I hope you don't plan to return to that old town."
 				},
 				{
 					"type": "end"
@@ -88,12 +88,12 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "With one layer of armor, you’re protected, but is it enough? The dragon below will test your limits."
+					"line": "With one layer of armor, you’re protected, but is it enough? Ahead lies a slumbering dragon in its cave, guarding riches and glory."
 				},
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "I hope the tower above still calls to you. To climb, you’ll need to shed your defenses and trust in us knights as we await at the top."
+					"line": "I hope the knight's tower can also call to you. To climb, you’ll need to shed your defenses and trust in us knights as we await at the top."
 				},
 				{
 					"char": "Merchant",
@@ -107,7 +107,7 @@
 					"nbanswers": 3,
 					"answer0": "I’ll take more armor. I need all the protection I can get.",
 					"nextscene0": 4,
-					"answer1": "I’ll shed this armor. I’m ready to climb the tower.",
+					"answer1": "I’ll shed this armor. I’m ready to climb the tower and join the knight community.",
 					"nextscene1": 5,
 					"answer2": "I’ll keep what I have as I take on the dragon.",
 					"nextscene2": 6
@@ -120,7 +120,7 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Excellent choice. The dragon will be no match for you now!"
+					"line": "Smart choice. This armor will keep you safe. Now go forth and slay the dragon to claim its riches!"
 				},
 				{
 					"char": "Merchant",
@@ -128,9 +128,14 @@
 					"function": "IncreaseArmor"
 				},
 				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Your story will be one of glory and triumph! You’ll be a hero to all and be accepted once again!"
+				},
+				{
 					"char": "Knight",
 					"type": "line",
-					"line": "I hope it serves you well, though I wish you’d chosen vulnerability over more defense."
+					"line": "I hope the armor serves you well, though I wish you’d chosen connection over defense."
 				},
 				{
 					"type": "end"
@@ -143,7 +148,7 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "You’ve made the right choice. Connection lies at the top of the tower, not behind walls of steel."
+					"line": "Thank you! You’ve made the right choice. Connection lies at the top of the tower, not behind walls of steel."
 				},
 				{
 					"char": "Knight",
@@ -166,7 +171,7 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "I fail to understand why you decline further protection..." 
+					"line": "I fail to understand why you decline further protection..."
 				},
 				{
 					"char": "Merchant",
@@ -177,6 +182,117 @@
 					"char": "Knight",
 					"type": "line",
 					"line": "Be careful. Glory may not be as fulfilling as you think."
+				},
+				{
+					"type": "end"
+				}
+			]
+		},
+		{
+			"id": 7,
+			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Ahead lies a slumbering dragon in its cave, guarding riches and glory. Slay this dragon and your old town will love you!"
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "As knights we still want ask to climb our tower and join our community, but you must let go of the weight holding you back."
+				},
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "With two layers of armor, the dragon doesn’t stand a chance. But the climb? You’ll never make it like this."
+				},
+				{
+					"char": "Knight",
+					"type": "question",
+					"question": "What will you do? Keep your armor, shed it for the climb, or take a third layer?",
+					"nbanswers": 3,
+					"answer0": "I’ll keep my armor. The dragon is my goal.",
+					"nextscene0": 8,
+					"answer1": "I’ll shed my armor. I want to climb the tower.",
+					"nextscene1": 9,
+					"answer2": "I’ll take more armor. I want to be unstoppable.",
+					"nextscene2": 10
+				}
+			]
+		},
+		{
+			"id": 8,
+			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "I fail to understand why you decline further protection..."
+				},
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Alas, glory awaits! I pray that your current armor will carry you to victory."
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "Be careful. Glory may not be as fulfilling as you think."
+				},
+				{
+					"type": "end"
+				}
+			]
+		},
+		{
+			"id": 9,
+			"dialogs": [
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "Thank you! You’ve made the right choice. Connection lies at the top of the tower, not behind walls of steel."
+				},
+				{
+					"char": "Knight",
+					"type": "function",
+					"function": "DecreaseArmor"
+				},
+				{
+					"char": "Knight",
+					"type": "function",
+					"function": "DecreaseArmor"
+				},
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Bah! We’ll see how well trust serves you when danger strikes."
+				},
+				{
+					"type": "end"
+				}
+			]
+		},
+		{
+			"id": 10,
+			"dialogs": [
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Smart choice. This armor will keep you safe. Now go forth and slay the dragon to claim its riches!"
+				},
+				{
+					"char": "Merchant",
+					"type": "function",
+					"function": "IncreaseArmor"
+				},
+				{
+					"char": "Merchant",
+					"type": "line",
+					"line": "Your story will be one of glory and triumph! You’ll be a hero to all and be accepted once again!"
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "I hope the armor serves you well, though I wish you’d chosen connection over defense."
 				},
 				{
 					"type": "end"

@@ -346,10 +346,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 464277015865243,
+									"sid": 751051462302167,
 									"parameters": {
 										"variable": "curScene",
-										"value": "6"
+										"value": "7"
 									}
 								}
 							],
@@ -778,25 +778,66 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 218198595690684,
+									"sid": 814065258327754,
 									"parameters": {
 										"first-value": "CharNameTxt.Text",
 										"comparison": 0,
-										"second-value": "\"Merchant2\""
+										"second-value": "\"Merchant\""
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-text",
-									"objectClass": "CharNameTxt",
-									"sid": 740781912824751,
+									"id": "set-position",
+									"objectClass": "CharBox",
+									"sid": 264246268526523,
 									"parameters": {
-										"text": "\"Merchant\""
+										"x": "344",
+										"y": "633"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "CharNameTxt",
+									"sid": 358744509648516,
+									"parameters": {
+										"x": "344",
+										"y": "633"
 									}
 								}
 							],
-							"sid": 425611178099381
+							"sid": 759605144472329
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 648767404885727
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "CharBox",
+									"sid": 460465897887941,
+									"parameters": {
+										"x": "1036",
+										"y": "633"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "CharNameTxt",
+									"sid": 631189052293762,
+									"parameters": {
+										"x": "1036",
+										"y": "633"
+									}
+								}
+							],
+							"sid": 501937041926903
 						}
 					]
 				},

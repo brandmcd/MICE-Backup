@@ -218,8 +218,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 686,
-								"y": 779,
+								"x": 690,
+								"y": 780,
 								"width": 1158,
 								"height": 209,
 								"originX": 0.5,
@@ -258,8 +258,8 @@
 							"showing": true,
 							"locked": false,
 							"world": {
-								"x": 340,
-								"y": 632,
+								"x": 344,
+								"y": 633,
 								"width": 466,
 								"height": 84,
 								"originX": 0.5,
@@ -328,7 +328,7 @@
 						"text-direction": "ltr",
 						"icon-set": -1,
 						"initially-visible": true,
-						"origin": "top-left",
+						"origin": "center",
 						"read-aloud": false
 					},
 					"uid": 38,
@@ -346,12 +346,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 107.5031906109711,
-						"y": 590.477761696998,
+						"x": 343.2185973138626,
+						"y": 630.2122063410204,
 						"width": 466,
 						"height": 81,
-						"originX": 0,
-						"originY": 0,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
@@ -384,7 +384,7 @@
 						"text-direction": "ltr",
 						"icon-set": -1,
 						"initially-visible": true,
-						"origin": "top-left",
+						"origin": "center",
 						"read-aloud": false
 					},
 					"uid": 65,
@@ -402,12 +402,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 116,
-						"y": 678,
+						"x": 690,
+						"y": 780,
 						"width": 1129,
 						"height": 213,
-						"originX": 0,
-						"originY": 0,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

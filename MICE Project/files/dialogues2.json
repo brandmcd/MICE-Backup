@@ -17,7 +17,7 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Hmph. Faith and agility won’t stop an arrow from finding its mark. You’ll need wit and fortune to survive this forest."
+					"line": "Hmph. Faith and agility won’t stop an arrow from finding its mark. There is still much to fear."
 				},
 				{
 					"char": "Knight",
@@ -26,12 +26,17 @@
 				},
 				{
 					"char": "Merchant",
+					"type": "line",
+					"line": "Yet where will you go after this? How will you become a hero for your people without the protection of armor?"
+				},
+				{
+					"char": "Knight",
 					"type": "question",
-					"question": "Before you proceed, one final offer...\nWill you reconsider and take some armor for protection?",
+					"question": "So, friend, what will you do now? Will you take the armor, or strive to find a new path with your allies?",
 					"nbanswers": 2,
-					"answer0": "I’ll take the armor. Some protection might be helpful, even if it reduces agility.",
+					"answer0": "I’ll take the armor to become a hero, even if it reduces agility.",
 					"nextscene0": 1,
-					"answer1": "I’ll go without. My allies are protection enough.",
+					"answer1": "I’ll go without. My new allies are protection enough.",
 					"nextscene1": 2
 				}
 			]
@@ -52,7 +57,7 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "If this is the course you deem best, I honor your judgment. However, remember that no armor can replace the bonds we share."
+					"line": "If this is your path, walk it boldly. But remember, no armor can replace the strength found in the bonds of community."
 				},
 				{
 					"type": "end"
@@ -65,12 +70,12 @@
 				{
 					"char": "Knight",
 					"type": "line",
-					"line": "A fine choice! You place trust above steel, my companion will be proud. We stand as one."
+					"line": "A fine choice! By placing trust in others, you’ve embraced a path that leads to connection and shared strength!"
 				},
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Hmph. Very well. Just remember that fate offers no pity to the careless."
+					"line": "Hmph. Bold, but risky. Just remember, no one can protect you better than you can protect yourself."
 				},
 				{
 					"type": "end"
@@ -97,12 +102,22 @@
 				},
 				{
 					"char": "Merchant",
+					"type": "line",
+					"line": "But you want to become a hero for your people, don’t you? You can’t do that without armor!"
+				},
+				{
+					"char": "Knight",
+					"type": "line",
+					"line": "Perhaps the path forward is not forged by steel, but by finding allies who accept and strengthen you as you are."
+				},
+				{
+					"char": "Merchant",
 					"type": "question",
-					"question": "What will you do now? Keep what you have, add more, or set some aside in favor of trust?",
+					"question": "What will you do now? Will you strengthen your armor further, shed some of it to trust in others, or maintain balance?",
 					"nbanswers": 3,
-					"answer0": "I’ll take more armor despite the cost of agility.",
+					"answer0": "I’ll take more armor protection outweighs cost of agility.",
 					"nextscene0": 4,
-					"answer1": "I’ll shed some armor. Trust in my allies is enough.",
+					"answer1": "I’ll shed some armor. I want to trust in new allies.",
 					"nextscene1": 5,
 					"answer2": "I’ll keep what I have. A balanced choice feels right.",
 					"nextscene2": 6
@@ -115,7 +130,7 @@
 				{
 					"char": "Merchant",
 					"type": "line",
-					"line": "Ah, an even wiser choice! Extra armor will serve you well."
+					"line": "Ah, an even wiser choice! Extra armor will serve you well! You will soon be a hero for your people!"
 				},
 				{
 					"char": "Merchant",
