@@ -2,6 +2,10 @@
 	"name": "Settings",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "LayoutManager"
+		},
+		{
 			"eventType": "variable",
 			"name": "doType",
 			"type": "boolean",

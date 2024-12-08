@@ -66,6 +66,82 @@
 		{
 			"eventType": "comment",
 			"text": "TODO: Add Transition Slides"
+		},
+		{
+			"functionName": "FadeOut",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "COVER",
+					"sid": 352914686385958,
+					"parameters": {
+						"opacity": "100"
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "COVER",
+					"sid": 352800659493986,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "1"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "COVER",
+					"sid": 909206008465463,
+					"behaviorType": "Fade"
+				}
+			],
+			"sid": 802890930918564
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 183706636913041
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 651314785331892,
+					"parameters": {
+						"object-to-create": "COVER",
+						"layer": "\"HUD\"",
+						"x": "0",
+						"y": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "COVER",
+					"sid": 231203574344430,
+					"parameters": {
+						"width": "5000",
+						"height": "5000"
+					}
+				},
+				{
+					"callFunction": "FadeOut",
+					"sid": 321686417684778
+				}
+			],
+			"sid": 828442418030131
 		}
 	],
 	"sid": 533993452785165

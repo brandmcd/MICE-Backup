@@ -10,6 +10,10 @@
 			"includeSheet": "ArmorManager"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "MusicManager"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{

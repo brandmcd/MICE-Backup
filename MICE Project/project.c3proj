@@ -139,7 +139,8 @@
 			"checkbox",
 			"doTypewriter",
 			"start",
-			"Mouse"
+			"Mouse",
+			"COVER"
 		],
 		"subfolders": [
 			{
@@ -319,7 +320,23 @@
 				{
 					"name": "mice_level_1_base_ambiance.webm",
 					"type": "audio/webm; codecs=opus",
-					"sid": 823836999794480,
+					"sid": 860201245702459,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mice_level_2_ambiance_Oct_28_2024_452_PM (2).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 167749701638990,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mice_level_3_ambiance.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 184890327737902,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -418,6 +435,14 @@
 					"name": "dialogues3.json",
 					"type": "application/json",
 					"sid": 261591780081616,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "tempdialogue.json",
+					"type": "application/json",
+					"sid": 809227363755203,
 					"file-info": {
 						"purpose": "none"
 					}

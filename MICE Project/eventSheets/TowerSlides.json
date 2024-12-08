@@ -6,6 +6,10 @@
 			"includeSheet": "LayoutManager"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "MusicManager"
+		},
+		{
 			"eventType": "variable",
 			"name": "slideCount2",
 			"type": "number",

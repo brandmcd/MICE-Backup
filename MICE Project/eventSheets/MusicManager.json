@@ -5,27 +5,26 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 590906675158582
+				},
+				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 492775957200153,
+					"sid": 205721701992659,
 					"parameters": {
 						"first-value": "LayoutName",
 						"comparison": 0,
-						"second-value": "\"Forest Level\""
+						"second-value": "\"2. Choice1\""
 					}
-				},
-				{
-					"id": "is-any-playing",
-					"objectClass": "Music",
-					"sid": 841669892162108,
-					"isInverted": true
 				}
 			],
 			"actions": [
 				{
 					"id": "play",
 					"objectClass": "Music",
-					"sid": 958318747434709,
+					"sid": 871067187043510,
 					"parameters": {
 						"audio-file": "mice_level_1_base_ambiance",
 						"loop": "looping",
@@ -35,7 +34,244 @@
 					}
 				}
 			],
-			"sid": 462399287777679
+			"sid": 740159394317218
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 938173382243338
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 744852090244160,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"3. Village\""
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "Music",
+					"sid": 358280705018801,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Music",
+					"sid": 427354534983637,
+					"parameters": {
+						"audio-file": "mice_level_1_base_ambiance",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 325440949544045
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 288606442970031
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 446278679250640,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"4. Choice2\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Music",
+					"sid": 728972586529327
+				},
+				{
+					"id": "play",
+					"objectClass": "Music",
+					"sid": 523857897021858,
+					"parameters": {
+						"audio-file": "mice_level_2_ambiance_Oct_28_2024_452_PM (2)",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 764751537160971
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 417224211965536
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 782460649163221,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"5. Forest Level\""
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "Music",
+					"sid": 136983441180371,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Music",
+					"sid": 731895386887457,
+					"parameters": {
+						"audio-file": "mice_level_2_ambiance_Oct_28_2024_452_PM (2)",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 848451914793402
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 150486112868378
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 769656752228652,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"6. Choice3\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Music",
+					"sid": 132976306483147
+				},
+				{
+					"id": "play",
+					"objectClass": "Music",
+					"sid": 650972689230038,
+					"parameters": {
+						"audio-file": "mice_level_3_ambiance",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 854065124086159
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 586671327560648
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 215865253692223,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"7. Tower\""
+					}
+				},
+				{
+					"id": "is-any-playing",
+					"objectClass": "Music",
+					"sid": 136928103610675,
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Music",
+					"sid": 726250119564319,
+					"parameters": {
+						"audio-file": "mice_level_3_ambiance",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 349988858080586
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 458821836715716,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"Cave End\""
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 410440775467982,
+					"parameters": {
+						"first-value": "LayoutName",
+						"comparison": 0,
+						"second-value": "\"Tower End\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "stop-all",
+					"objectClass": "Music",
+					"sid": 124215213562203
+				}
+			],
+			"sid": 814923416591890,
+			"isOrBlock": true
 		}
 	],
 	"sid": 860590186698292
