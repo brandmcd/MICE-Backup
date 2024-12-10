@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 41600,
+	"savedWithRelease": 41602,
 	"name": "MICE Project",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -260,7 +260,6 @@
 	"layouts": {
 		"items": [
 			"0. Settings",
-			"1. FirstScene",
 			"2. Choice1",
 			"3. Village",
 			"4. Choice2",

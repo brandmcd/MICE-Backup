@@ -119,6 +119,14 @@
 					"parameters": {
 						"key": 37
 					}
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 573355191470196,
+					"parameters": {
+						"key": 65
+					}
 				}
 			],
 			"actions": [
@@ -131,7 +139,8 @@
 					}
 				}
 			],
-			"sid": 160998860919521
+			"sid": 160998860919521,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -142,6 +151,14 @@
 					"sid": 474247142221800,
 					"parameters": {
 						"key": 39
+					}
+				},
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 814059455009079,
+					"parameters": {
+						"key": 68
 					}
 				}
 			],
@@ -155,7 +172,8 @@
 					}
 				}
 			],
-			"sid": 374425550586601
+			"sid": 374425550586601,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -588,6 +606,90 @@
 				}
 			],
 			"sid": 866907924217975
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 824711156052740,
+					"parameters": {
+						"key": 65
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "PlayerBox",
+					"sid": 635690801496662,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "left"
+					}
+				}
+			],
+			"sid": 751382730836114
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 771164706559380,
+					"parameters": {
+						"key": 68
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "PlayerBox",
+					"sid": 410067028800950,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				}
+			],
+			"sid": 929911067060765
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 741137225914831,
+					"parameters": {
+						"key": 32
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 848738284930781,
+					"parameters": {
+						"key": 87
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "PlayerBox",
+					"sid": 334865683094872,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "jump"
+					}
+				}
+			],
+			"sid": 697728750538321,
+			"isOrBlock": true
 		}
 	],
 	"sid": 197420161874541
